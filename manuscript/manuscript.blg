@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: manuscript.aux
+The style file: prsty.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: manuscriptNotes.bib
+Database file #2: manuscript.bib
+You've used 1 entry,
+            1909 wiz_defined-function locations,
+            509 strings with 3870 characters,
+and the built_in function-call counts, 244 in all, are:
+= -- 9
+> -- 10
+< -- 0
++ -- 3
+- -- 2
+* -- 23
+:= -- 34
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 10
+empty$ -- 22
+format.name$ -- 3
+if$ -- 55
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 6
+num.names$ -- 1
+pop$ -- 5
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 19
+stack$ -- 0
+substring$ -- 19
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 2
+width$ -- 2
+write$ -- 7
