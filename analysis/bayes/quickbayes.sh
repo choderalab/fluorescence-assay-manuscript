@@ -4,13 +4,27 @@
 # of bayesian predictions of delG from xml data files.
 # REQUIREMENTS: assaytools must be installed
 
-#This is currently incomplete and only analyzes a small selection of the available data
+# make sure the python path includes local dir
+# use env PYTHONPATH="./" before quickmodel
 
-python inputs.py
+# Run for singlet assay with 4 ligands and DMSO backfill
 
-quickmodel "../../data/singlet/DMSO-backfill"
+env PYTHONPATH="./" quickmodel --inputs 'inputs_DMSO' 
+
+mkdir DMSO-backfill
 
 mv *.png DMSO-backfill
 mv *.npy DMSO-backfill
 mv *.json DMSO-backfill
 mv *.pickle DMSO-backfill
+
+# Run for singlet assay with 8 different ligands
+
+env PYTHONPATH="./" quickmodel --inputs 'inputs_8ligs'
+
+mkdir 8ligs
+
+mv *.png 8ligs
+mv *.npy 8ligs
+mv *.json 8ligs
+mv *.pickle 8ligs
