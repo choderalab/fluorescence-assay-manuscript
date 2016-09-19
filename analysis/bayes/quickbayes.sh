@@ -7,6 +7,17 @@
 # make sure the python path includes local dir
 # use env PYTHONPATH="./" before quickmodel
 
+# Run for first spectra assay.
+
+env PYTHONPATH="./" quickmodel --inputs 'inputs_first_spectra' --type 'spectra'
+
+mkdir first_spectra
+
+mv *.pdf first_spectra
+mv *.npy first_spectra
+mv *.json first_spectra
+mv *.pickle first_spectra
+
 # Run for singlet assay with 4 ligands and DMSO backfill
 
 env PYTHONPATH="./" quickmodel --inputs 'inputs_DMSO' 
