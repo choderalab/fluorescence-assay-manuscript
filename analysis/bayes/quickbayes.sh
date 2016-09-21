@@ -18,6 +18,17 @@ mv *.npy first_spectra
 mv *.json first_spectra
 mv *.pickle first_spectra
 
+# Run for first p38 spectra assay.
+
+env PYTHONPATH="./" quickmodel --inputs 'inputs_p38_spectra1' --type 'spectra'
+
+mkdir first_spectra_p38
+
+mv *.pdf first_spectra_p38
+mv *.npy first_spectra_p38
+mv *.json first_spectra_p38
+mv *.pickle first_spectra_p38
+
 # Run for singlet assay with 4 ligands and DMSO backfill
 
 env PYTHONPATH="./" quickmodel --inputs 'inputs_DMSO' 
