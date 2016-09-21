@@ -1,5 +1,34 @@
 # data
 Raw data for fluorescence assay manuscript.
+Table summary of the results we have:
+| SINGLET  |  Src   | Abl   | Src GK  | Abl GK  | p38   | CA II  |
+|:--------:|:------:|:-----:|:-------:|:-------:|:-----:|------- |
+| Bos      | x      | x     | x       | x       | YES   |   x    |
+| Bsi      | x      | x     | x       | x       | YES   |   x    |
+| Erl      | x      | x     | x       | x       | YES   |   x    |
+| Gef      | x      | x     | x       | x       | YES   |   x    |
+| Pon      | x      | x     | x       | x       | YES   |   x    |
+| Lap      | x      | x     | x       | x       | YES   |   x    |
+| Sar      | x      |    x |x  |     x |YES    |    x |
+| Van      | x      |    x |x  |     x |YES    |     x |
+| Ima      | x      | x |x   |      x |x      |     x |
+| Das      | x      |   x |x   |      x|x      |     x |
+| DQA      | x      |    x |x   |     x |x      |    x |
+
+|   SPECTRA     |  Src     | Abl   |  Src GK   | Abl GK  | p38   | CA II  |
+|:-------------:|:--------:|:-----:|:---------:|:-------:|:-----:|------- |
+| Bos      | YES | YES | YES  |     YES |YES    |     YES |
+| Bsi      | YES      |  YES |YES   |      YES|YES    |    YES |
+| Erl      | YES    | YES |YES   |     YES|YES    |    YES |
+| Gef      | YES     | YES |YES   |     YES |YES    |    YES |
+| Pon      | x | x |x   |      x |YES    |     YES |
+| Lap      | x      |   x |x   |      x |x   |     x |
+| Sar      | x      |   x|x   |      x |x   |    x|
+| Van      | x      |   x |x   |      x |x   |    x |
+| Ima      | x | x|x |x  |YES   |    YES |
+| Das      |x      |   x |x |x  |YES    |    YES |
+| DQA      | x      |    x |x   |      x |YES   |     YES |
+
 Below is a description of each set of data.
 * `singlet` - data from singlet assays (emission and excitation at a single wavelength)
   * *p38_singlet1_20160420_153238.xml* and *p38_singlet2_20160420_154750.xml*
