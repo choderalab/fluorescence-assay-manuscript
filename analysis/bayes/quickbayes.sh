@@ -29,6 +29,17 @@ mv *.npy first_spectra_p38
 mv *.json first_spectra_p38
 mv *.pickle first_spectra_p38
 
+# Run for spectra 2gains assay.
+
+env PYTHONPATH="./" quickmodel --inputs 'inputs_spectra_2gains' --type 'spectra'
+
+mkdir spectra_2gains
+
+mv *.pdf spectra_2gains
+mv *.npy spectra_2gains
+mv *.json spectra_2gains
+mv *.pickle spectra_2gains
+
 # Run for singlet assay with 4 ligands and DMSO backfill
 
 env PYTHONPATH="./" quickmodel --inputs 'inputs_DMSO' 
