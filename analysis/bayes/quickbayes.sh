@@ -40,6 +40,28 @@ mv *.npy spectra_2gains
 mv *.json spectra_2gains
 mv *.pickle spectra_2gains
 
+#Run for p38 spectra analysis for other ligands.
+
+env PYTHONPATH="./" quickmodel --inputs 'inputs_p38_spectra_otherligs' --type 'spectra'
+
+mkdir first_p38_otherligs
+
+mv *.pdf first_p38_otherligs
+mv *.npy first_p38_otherligs
+mv *.json first_p38_otherligs
+mv *.pickle first_p38_otherligs
+
+# Run for CAII spectra analysis for other ligands.
+
+env PYTHONPATH="./" quickmodel --inputs 'inputs_CAII_spectra_otherligs' --type 'spectra'
+
+mkdir first_CAII_otherligs
+
+mv *.pdf first_CAII_otherligs
+mv *.npy first_CAII_otherligs
+mv *.json first_CAII_otherligs
+mv *.pickle first_CAII_otherligs
+
 # Run for singlet assay with 4 ligands and DMSO backfill
 
 env PYTHONPATH="./" quickmodel --inputs 'inputs_DMSO' 
