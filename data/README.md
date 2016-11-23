@@ -45,6 +45,24 @@ Below is a description of each set of data.
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase 
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
+  * *p38_0.5uM_8lig1_20161026_132449.xml* and *p38_0.5uM_8lig2_20161026_134006.xml*
+     * 8 LIGAND EXPERIMENT - at a standard 384-well plate fluorescent kinase inhibitor assay with 8 fluorescent ligands
+     * performed on October 26, 2016
+     * 384 well plate, assay volume 50 uL
+     * protein: p38 kinase at 0.5 uM
+     * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
+  * *p38_0.25uM_8lig1_20161026_155648* and *p38_0.25uM_8lig2_20161026_161159.xml*
+     * 8 LIGAND EXPERIMENT - at a standard 384-well plate fluorescent kinase inhibitor assay with 8 fluorescent ligands
+     * performed on October 26, 2016
+     * 384 well plate, assay volume 50 uL
+     * protein: p38 kinase at 0.25 uM
+     * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
+* *p38_0.125uM_8lig1_20161026_171600* and *p38_0.125uM_8lig2_20161026_173114.xml*
+     * 8 LIGAND EXPERIMENT - at a standard 384-well plate fluorescent kinase inhibitor assay with 8 fluorescent ligands
+     * performed on October 26, 2016
+     * 384 well plate, assay volume 50 uL
+     * protein: p38 kinase at 0.125 uM
+     * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
 * `spectra` - data from spectra assays (excitation at a single wavelength, full emission spectra)
   * `Abl`
     * `2015-12-18`
