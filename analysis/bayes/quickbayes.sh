@@ -90,10 +90,10 @@ env PYTHONPATH="./" quickmodel --inputs 'inputs_8ligs_0.5_protein_concentration'
 
 mkdir 8ligs_0.5_protein_concentration
 
-mv *.png 8ligs
-mv *.npy 8ligs
-mv *.json 8ligs
-mv *.pickle 8ligs
+mv *.png 8ligs_0.5_protein_concentration
+mv *.npy 8ligs_0.5_protein_concentration
+mv *.json 8ligs_0.5_protein_concentration
+mv *.pickle 8ligs_0.5_protein_concentration
 
 # Run for singlet assay with 8 different ligands and 0.25uM of protein
 
@@ -101,10 +101,10 @@ env PYTHONPATH="./" quickmodel --inputs 'inputs_8ligs_0.25_protein_concentration
 
 mkdir 8ligs_0.25_protein_concentration
 
-mv *.png 8ligs
-mv *.npy 8ligs
-mv *.json 8ligs
-mv *.pickle 8ligs
+mv *.png 8ligs_0.25_protein_concentration
+mv *.npy 8ligs_0.25_protein_concentration
+mv *.json 8ligs_0.25_protein_concentration
+mv *.pickle 8ligs_0.25_protein_concentration
 
 # Run for singlet assay with 8 different ligands and 0.125uM of protein
 
@@ -112,7 +112,7 @@ env PYTHONPATH="./" quickmodel --inputs 'inputs_8ligs_0.125_protein_concentratio
 
 mkdir 8ligs_0.125_protein_concentration
 
-mv *.png 8ligs
-mv *.npy 8ligs
-mv *.json 8ligs
-mv *.pickle 8ligs
+mv *.png 8ligs_0.125_protein_concentration
+mv *.npy 8ligs_0.125_protein_concentration
+mv *.json 8ligs_0.125_protein_concentration
+mv *.pickle 8ligs_0.125_protein_concentration
