@@ -3,11 +3,11 @@ import numpy as np
 from glob import glob
 
 inputs = {
-    'xml_file_path' :  "/Users/hansons/Documents/github/fluorescence-assay-manuscript/data/spectra/",
-    'file_set'      :  {'Src': glob("/Users/hansons/Documents/github/fluorescence-assay-manuscript/data/spectra/Src/2016-03-09/*.xml"),
-                        'p38': glob("/Users/hansons/Documents/github/fluorescence-assay-manuscript/data/spectra/p38/2016-03-07/*.xml"),
-                        'CAII': glob("/Users/hansons/Documents/github/fluorescence-assay-manuscript/data/spectra/CAII/2016-03-15/*.xml"),
-                        'Abl': glob("/Users/hansons/Documents/github/fluorescence-assay-manuscript/data/spectra/Abl/2016-03-11/*.xml")},
+    'xml_file_path' :  "../../data/spectra/",
+    'file_set'      :  {'Src': glob("../../data/spectra/Src/2016-03-09/*.xml"),
+                        'p38': glob("../../data/spectra/p38/2016-03-07/*.xml"),
+                        'CAII': glob("../../data/spectra/CAII/2016-03-15/*.xml"),
+                        'Abl': glob("../../data/spectra/Abl/2016-03-11/*.xml")},
     'ligand_order'  :  ['Bosutinib','Bosutinib Isomer','Erlotinib','Gefitinib'],
     'section'       :  'em280_Copy2',
     'wavelength'    :  '480',
