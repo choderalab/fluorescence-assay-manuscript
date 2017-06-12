@@ -4,9 +4,6 @@
 # of bayesian predictions of delG from xml data files.
 # REQUIREMENTS: assaytools must be installed
 
-# make sure the python path includes local dir
-# use env PYTHONPATH="./" before quickmodel
-
 # Run for first spectra assay.
 
 quickmodel --inputs 'inputs_first_spectra'
