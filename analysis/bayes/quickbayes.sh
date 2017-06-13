@@ -11,7 +11,6 @@ quickmodel --inputs 'inputs_first_spectra'
 mkdir first_spectra
 
 mv *.png first_spectra
-mv *.npy first_spectra
 mv *.json first_spectra
 mv *.pickle first_spectra
 
@@ -22,7 +21,6 @@ quickmodel --inputs 'inputs_p38_spectra1'
 mkdir first_spectra_p38
 
 mv *.png first_spectra_p38
-mv *.npy first_spectra_p38
 mv *.json first_spectra_p38
 mv *.pickle first_spectra_p38
 
@@ -33,7 +31,6 @@ quickmodel --inputs 'inputs_spectra_2gains'
 mkdir spectra_2gains
 
 mv *.png spectra_2gains
-mv *.npy spectra_2gains
 mv *.json spectra_2gains
 mv *.pickle spectra_2gains
 
@@ -44,7 +41,6 @@ quickmodel --inputs 'inputs_p38_spectra_otherligs'
 mkdir first_p38_otherligs
 
 mv *.png first_p38_otherligs
-mv *.npy first_p38_otherligs
 mv *.json first_p38_otherligs
 mv *.pickle first_p38_otherligs
 
@@ -55,7 +51,6 @@ quickmodel --inputs 'inputs_CAII_spectra_otherligs'
 mkdir first_CAII_otherligs
 
 mv *.pdf first_CAII_otherligs
-mv *.npy first_CAII_otherligs
 mv *.json first_CAII_otherligs
 mv *.pickle first_CAII_otherligs
 
@@ -66,7 +61,6 @@ quickmodel --inputs 'inputs_DMSO'
 mkdir DMSO-backfill
 
 mv *.png DMSO-backfill
-mv *.npy DMSO-backfill
 mv *.json DMSO-backfill
 mv *.pickle DMSO-backfill
 
@@ -77,7 +71,6 @@ quickmodel --inputs 'inputs_8ligs'
 mkdir 8ligs
 
 mv *.png 8ligs
-mv *.npy 8ligs
 mv *.json 8ligs
 mv *.pickle 8ligs
 
@@ -88,7 +81,6 @@ quickmodel --inputs 'inputs_8ligs_0.5_protein_concentration'
 mkdir 8ligs_0.5_protein_concentration
 
 mv *.png 8ligs_0.5_protein_concentration
-mv *.npy 8ligs_0.5_protein_concentration
 mv *.json 8ligs_0.5_protein_concentration
 mv *.pickle 8ligs_0.5_protein_concentration
 
@@ -99,7 +91,6 @@ quickmodel --inputs 'inputs_8ligs_0.25_protein_concentration'
 mkdir 8ligs_0.25_protein_concentration
 
 mv *.png 8ligs_0.25_protein_concentration
-mv *.npy 8ligs_0.25_protein_concentration
 mv *.json 8ligs_0.25_protein_concentration
 mv *.pickle 8ligs_0.25_protein_concentration
 
@@ -110,6 +101,5 @@ quickmodel --inputs 'inputs_8ligs_0.125_protein_concentration'
 mkdir 8ligs_0.125_protein_concentration
 
 mv *.png 8ligs_0.125_protein_concentration
-mv *.npy 8ligs_0.125_protein_concentration
 mv *.json 8ligs_0.125_protein_concentration
 mv *.pickle 8ligs_0.125_protein_concentration

@@ -3,8 +3,8 @@ import numpy as np
 from glob import glob
 
 inputs = {
-    'xml_file_path' :  "/Users/hansons/Documents/github/fluorescence-assay-manuscript/data/spectra/",
-    'file_set'      :  {'CAII': glob("/Users/hansons/Documents/github/fluorescence-assay-manuscript/data/spectra/CAII/2016-03-31/*.xml")},
+    'xml_file_path' :  "../../data/spectra/",
+    'file_set'      :  {'CAII': glob("../../data/spectra/CAII/2016-03-31/*.xml")},
     'ligand_order'  :  ['Imatinib','Ponatinib','Dasatinib','DiAminoQuinazoline'],
     'section'       :  'em280',
     'wavelength'    :  '480',
