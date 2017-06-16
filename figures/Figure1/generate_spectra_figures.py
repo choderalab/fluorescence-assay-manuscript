@@ -5,6 +5,7 @@ from lxml import etree
 import pandas as pd
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt
+import numpy as np
 
 import seaborn as sns
 sns.set(style='white')
@@ -64,7 +65,7 @@ def plot_spectra_grid_advanced_inset(file_set,protein,ligands,ligand,section,yli
     lines = lines
     
     # plot the spectra
-    fig = plt.figure(figsize=(8,6));
+    fig = plt.figure(figsize=(7,6));
     ax = df['fluorescence'].iloc[:,12].plot(ylim=(-10,ylim),legend=False, linewidth=4,color='m',logy=True); 
     ax.axvline(x=lines[0],color='black',linestyle='--');
     ax.axvline(x=lines[1],color='blue',linestyle='--');
@@ -73,10 +74,10 @@ def plot_spectra_grid_advanced_inset(file_set,protein,ligands,ligand,section,yli
         df['fluorescence'].iloc[:,11+i].plot(legend=False, linewidth=4,c=cm.gray(i*15+50),logy=True,ax = ax, fontsize =20);
     sns.despine()
     plt.yticks([])
-    plt.xticks(fontsize=20)
-    plt.xlim(300,600)
-    plt.xlabel('wavelength (nm)', fontsize=26)
-    plt.ylabel('fluorescence', fontsize=26)
+    plt.xticks(fontsize=26)
+    plt.xlim(310,600)
+    plt.xlabel('wavelength (nm)', fontsize=30)
+    plt.ylabel('log(Intensity)', fontsize=30)
 #    plt.text(550,0.9*ylim,"lines=%s"%lines,color='0.7')
 #    plt.title(title)
     plt.tight_layout();
@@ -99,15 +100,17 @@ def plot_spectra_grid_advanced_inset(file_set,protein,ligands,ligand,section,yli
     plt.semilogx(Lstated,difference_280_480_normalized,color="blue",marker='o',linestyle='None',label='%s nm'%lines[1]);
     plt.semilogx(Lstated,difference_280_340_normalized,color="black",marker='o',linestyle='None',label='%s nm'%lines[0]);
     plt.yticks([])
-    plt.xlabel('Ligand (M)', fontsize=16);
-    plt.ylabel('Norm. Fluor.', fontsize=16);
-    plt.legend(loc=0,bbox_to_anchor=(-0.6 , 1.1), fontsize=16);
+    x_inset_labels = [0,-8,-7,-6,-5]
+    plt.xticks([1e-9,1e-8,1e-7,1e-6,1e-5], x_inset_labels,fontsize=16)
+    plt.xlabel('$log_{10}([L])$', fontsize=18);
+    plt.ylabel('RFU', fontsize=18);
+    plt.legend(loc=0,bbox_to_anchor=(-0.6 , 1.1), fontsize=20);
     a.spines['top'].set_visible(False)
     a.spines['right'].set_visible(False)
     a.spines['left'].set_visible(False)
     a.spines['left'].set_smart_bounds(True)
 
-Lstated = [20.0e-6,9.15e-6,4.18e-6,1.91e-6,0.875e-6,0.4e-6,0.183e-6,0.0837e-6,0.0383e-6,0.0175e-6,0.008e-6,0.001e-6]
+Lstated = [20.0e-6,9.15e-6,4.18e-6,1.91e-6,0.875e-6,0.4e-6,0.183e-6,0.0837e-6,0.0383e-6,0.0175e-6,0.008e-6,0.0035e-6]
 
 ylim = 500000
 lines = [340,480]
@@ -116,39 +119,48 @@ file_set = {'Src': "../../data/spectra/Src/2016-03-09/Src_Gef_20160309_163417.xm
 ligands = ['Gefitinib']
 plot_spectra_grid_advanced_inset(file_set,'Src',ligands,'Gefitinib',1,ylim,lines,Lstated)
 plt.savefig('Src-Gefitinib-log-inset.png',dpi=500)
+plt.savefig('Src-Gefitinib-log-inset.pdf')
 
 file_set = {'Abl': "../../data/spectra/Abl/2016-03-11/Abl_D382N_Gef_20160311_152340.xml"}
 ligands = ['Gefitinib']
 plot_spectra_grid_advanced_inset(file_set,'Abl',ligands,'Gefitinib',1,ylim,lines,Lstated)
 plt.savefig('Abl-Gefitinib-log-inset.png',dpi=500)
+plt.savefig('Abl-Gefitinib-log-inset.pdf')
 
 file_set = {'p38': "../../data/spectra/p38/2016-03-07/p38_Gef_20160307_175343.xml"}
 ligands = ['Gefitinib']
 plot_spectra_grid_advanced_inset(file_set,'p38',ligands,'Gefitinib',1,ylim,lines,Lstated)
 plt.savefig('p38-Gefitinib-log-inset.png',dpi=500)
+plt.savefig('p38-Gefitinib-log-inset.pdf')
 
 file_set = {'Src': "../../data/spectra/Src/2016-03-09/Src_Bos_20160309_143920.xml"}
 ligands = ['Bosutinib']
 plot_spectra_grid_advanced_inset(file_set,'Src',ligands,'Bosutinib',1,ylim,lines,Lstated)
 plt.savefig('Src-Bosutinib-log-inset.png',dpi=500)
+plt.savefig('Src-Bosutinib-log-inset.pdf')
 
 file_set = {'Abl': "../../data/spectra/Abl/2016-03-11/Abl_D382N_Bos_20160311_132205.xml"}
 ligands = ['Bosutinib']
 plot_spectra_grid_advanced_inset(file_set,'Abl',ligands,'Bosutinib',1,ylim,lines,Lstated)
 plt.savefig('Abl-Bosutinib-log-inset.png',dpi=500)
+plt.savefig('Abl-Bosutinib-log-inset.pdf')
 
 file_set = {'p38': "../../data/spectra/p38/2016-03-07/p38_Bos_20160307_160155.xml"}
 ligands = ['Bosutinib']
 plot_spectra_grid_advanced_inset(file_set,'p38',ligands,'Bosutinib',1,ylim,lines,Lstated)
 plt.savefig('p38-Bosutinib-log-inset.png',dpi=500)
+plt.savefig('p38-Bosutinib-log-inset.pdf')
 
 file_set = {'p38': "../../data/spectra/p38/2016-03-30/p38_Pon_20160330_160326.xml"}
 ligands = ['Ponatinib']
 plot_spectra_grid_advanced_inset(file_set,'p38',ligands,'Ponatinib',1,ylim,lines,Lstated)
 plt.savefig('p38-Ponatinib-log-inset.png',dpi=500)
+plt.savefig('p38-Ponatinib-log-inset.pdf')
 
 lines = [320,360]
 file_set = {'p38': "/Users/hansons/Documents/Desktop-MOVE/new_compounds/p38_Paz_20170119_164846.xml"}
 ligands = ['Pazopanib']
 plot_spectra_grid_advanced_inset(file_set,'p38',ligands,'Pazopanib',1,ylim,lines,Lstated)
 plt.savefig('p38-Pazopanib-log-inset-320-360.png',dpi=500)
+plt.savefig('p38-Pazopanib-log-inset-320-360.pdf')
+
