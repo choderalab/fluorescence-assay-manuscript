@@ -33,7 +33,9 @@ def xml2df_section(file,section):
             
     ### dataframe_rep replaces 'OVER' (when fluorescence signal maxes out) with '3289277', an arbitrarily high number
 
-    dataframe_rep = dataframe.replace({'OVER':'1.2e5'})
+    #dataframe_rep = dataframe.replace({'OVER':'1.2e5'})
+
+    dataframe_rep = dataframe.replace({'OVER':'NAN'})
 
     dataframe_rep[['fluorescence']] = dataframe_rep[['fluorescence']].astype('float')
             
@@ -93,8 +95,8 @@ def plot_spectra_grid_advanced_inset(file_set,protein,ligands,ligand,section,yli
     difference_280_480 = complex_280_480.values - ligand_280_480.values
     difference_280_340 = complex_280_340.values - ligand_280_340.values
     
-    difference_280_480_normalized = difference_280_480/difference_280_480.max()
-    difference_280_340_normalized = difference_280_340/difference_280_340.max()
+    difference_280_480_normalized = difference_280_480/np.nanmax(difference_280_480)
+    difference_280_340_normalized = difference_280_340/np.nanmax(difference_280_340)
     
     a = plt.axes([0.7, 0.7, .25, .25])
     plt.semilogx(Lstated,difference_280_480_normalized,color="blue",marker='o',linestyle='None',label='%s nm'%lines[1]);
