@@ -57,12 +57,17 @@ with open(r'%s'%data_file,'rb') as my_file:
 
 fig, ax = plt.subplots(figsize=(5,3))
 
-for top_complex_fluorescence_model in data['top_complex_fluorescence_model'][0][::50]:
+for top_complex_fluorescence_model in data['top_complex_fluorescence_model'][0][::100]:
     plt.semilogx(inputs['Lstated'], top_complex_fluorescence_model, marker='.',color='silver')
-for top_ligand_fluorescence_model in data['top_ligand_fluorescence_model'][0][::50]:
+for top_ligand_fluorescence_model in data['top_ligand_fluorescence_model'][0][::100]:
     plt.semilogx(inputs['Lstated'], top_ligand_fluorescence_model, marker='.',color='lightcoral', alpha=0.2)
-plt.semilogx(inputs['Lstated'], complex_fluorescence['Src-Bosutinib Isomer-CD'], 'ko',label='complex')
-plt.semilogx(inputs['Lstated'], ligand_fluorescence['Src-Bosutinib Isomer-CD'], marker='o',color='firebrick',linestyle='None',label='ligand')
+plt.semilogx(inputs['Lstated'], complex_fluorescence['Src-Bosutinib Isomer-CD'], 'ko',label='protein+ligand')
+plt.semilogx(inputs['Lstated'], data['top_complex_fluorescence_model'][0][0], marker='.',color='silver',label='model fit')
+plt.semilogx(inputs['Lstated'], ligand_fluorescence['Src-Bosutinib Isomer-CD'], marker='o',color='firebrick',linestyle='None',label='buffer+ligand')
+plt.semilogx(inputs['Lstated'], data['top_ligand_fluorescence_model'][0][0], marker='.',color='lightcoral', alpha=0.2, label='model fit')
+#These two lines are a repeat of the above to get the data points above the fit points, but still keep the legend in the right order.
+plt.semilogx(inputs['Lstated'], complex_fluorescence['Src-Bosutinib Isomer-CD'], 'ko')
+plt.semilogx(inputs['Lstated'], ligand_fluorescence['Src-Bosutinib Isomer-CD'], marker='o',color='firebrick',linestyle='None')
 
 plt.xticks(fontsize=15)
 plt.yticks([])
@@ -103,31 +108,92 @@ hist_legend = mpatches.Patch(color=(0.7372549019607844, 0.5098039215686274, 0.74
     %(interval[1],interval[0],interval[2]) )
     
 f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
+from matplotlib import gridspec
+gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1]) 
 
-ax1.plot(data['DeltaG'][0],color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353))
+ax1 = plt.subplot(gs[0])
+ax1.plot(range(0,len(data['DeltaG'][0]),10),data['DeltaG'][0][::10],color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353))
 ax1.set_xlabel('MCMC sample',fontsize=16);
 ax1.set_ylabel('$\Delta G$ ($k_B T$)',fontsize=16);
+ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
 ax1.tick_params(labelsize=16)
 ax1.set_xlim(0,99000)
 
 ax1.spines['top'].set_visible(False)
 
 f.subplots_adjust(wspace=0)
+
+ax2 = plt.subplot(gs[1])
 ax2.barh(bin_edges[:-1],hist,binwidth,color=clrs, edgecolor = "white");
 ax2.axhline(y=interval[0],color=(0.5,0.5,0.5),linestyle='--')
 ax2.axhline(y=interval[1],color=(0.5,0.5,0.5),linestyle='--')
 ax2.axhline(y=interval[2],color=(0.5,0.5,0.5),linestyle='--')
-ax2.legend(handles=[hist_legend],fontsize=16,loc=0,frameon=True)
 ax2.set_xlabel('$P(\Delta G)$',fontsize=16);
 plt.xticks([])
+plt.yticks([])
 
 ax2.spines['top'].set_visible(False)
 ax2.spines['right'].set_visible(False)
 
-plt.tight_layout()
+plt.savefig('DeltaG_trace_hist.png', dpi=500, bbox_inches='tight')
+plt.savefig('DeltaG_trace_hist.pdf', bbox_inches='tight')
 
-plt.savefig('DeltaG_trace_hist.png', dpi=500)
-plt.savefig('DeltaG_trace_hist..pdf')
+#Let's make the same plot, but in units of Kd
+
+interval_Kd = np.percentile(a=np.exp(data['DeltaG'][0]), q=[2.5, 50.0, 97.5])
+kd_binBoundaries = np.exp(np.arange(-18,-10,0.15))
+
+hist_legend = mpatches.Patch(color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353),
+    label = '$K_{d}$ = %.1f [%.1f,%.1f] uM'
+    %(interval_Kd[1]/1e-6,interval_Kd[0]/1e-6,interval_Kd[2]/1e-6) )
+
+f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
+gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1])
+
+ax1 = plt.subplot(gs[0])
+ax1.plot(range(0,len(data['DeltaG'][0]),10),np.exp(data['DeltaG'][0][::10]),color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353))
+ax1.set_xlabel('MCMC sample',fontsize=16);
+ax1.set_ylabel('$K_{d}$ ($M$)',fontsize=16);
+ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
+ax1.tick_params(labelsize=16)
+ax1.set_xlim(0,99000)
+ax1.set_ylim((1e-8,1e-5))
+plt.yscale('log')
+ax1.spines['top'].set_visible(False)
+
+f.subplots_adjust(wspace=0)
+
+ax2 = plt.subplot(gs[1])
+n, bins, patches = ax2.hist(np.exp(data['DeltaG'][0]),color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353),bins=kd_binBoundaries, edgecolor='white',orientation="horizontal")
+ax2.axhline(y=interval_Kd[0],color=(0.5,0.5,0.5),linestyle='--')
+ax2.axhline(y=interval_Kd[1],color=(0.5,0.5,0.5),linestyle='--')
+ax2.axhline(y=interval_Kd[2],color=(0.5,0.5,0.5),linestyle='--')
+ax2.set_xlabel('$P(K_{d})$',fontsize=16);
+ax2.set_ylim((1e-8,1e-5))
+plt.yscale('log')
+plt.xticks([])
+plt.yticks([])
+
+#set colors for 95% interval
+clrs = [(0.7372549019607844, 0.5098039215686274, 0.7411764705882353) for xx in bins]
+idxs = bins.argsort()
+idxs = idxs[::-1]
+gray_before = idxs[bins[idxs] < interval_Kd[0]]
+gray_after = idxs[bins[idxs] > interval_Kd[2]]
+for idx in gray_before:
+    clrs[idx] = (.5,.5,.5)
+for idx in gray_after:
+    clrs[idx] = (.5,.5,.5)
+
+for i,p in enumerate(patches):
+    plt.setp(p, 'facecolor', clrs[i+1])
+
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+
+plt.savefig('Kd_trace_hist.png', dpi=500, bbox_inches='tight')
+plt.savefig('Kd_trace_hist.pdf', bbox_inches='tight')
+
     
 #Finally we want to plot our F_PL and F_L traces
 
@@ -143,10 +209,8 @@ plt.ylabel('$F\_PL$', fontsize=20);
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
-plt.tight_layout()
-
-plt.savefig('F_PL.pdf')
-plt.savefig('F_PL.png',dpi=500)
+plt.savefig('F_PL.pdf', bbox_inches='tight')
+plt.savefig('F_PL.png',dpi=500, bbox_inches='tight')
 
 fig, ax = plt.subplots(figsize=(9,3))
 
@@ -160,7 +224,5 @@ plt.ylabel('$F\_L$', fontsize=20);
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
-plt.tight_layout()
-
-plt.savefig('F_L.pdf')
-plt.savefig('F_L.png',dpi=500)
+plt.savefig('F_L.pdf', bbox_inches='tight')
+plt.savefig('F_L.png',dpi=500, bbox_inches='tight')
