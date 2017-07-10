@@ -197,9 +197,62 @@ plt.savefig('Kd_trace_hist.pdf', bbox_inches='tight')
     
 #Finally we want to plot our F_PL and F_L traces
 
+interval_FPL = np.percentile(a=data['F_PL'][0], q=[2.5, 50.0, 97.5])
+
+hist_legend = mpatches.Patch(color='C0',
+    label = '$F\_PL$ = %.1e [%.1e,%.1e] '
+    %(interval_FPL[1],interval_FPL[0],interval_FPL[2]) )
+
+binBoundaries = np.linspace(1e10,5e11,70)
+
+f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
+gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1])
+
+ax1 = plt.subplot(gs[0])
+ax1.plot(range(0,len(data['F_PL'][0]),10),data['F_PL'][0][::10],color='C0')
+ax1.set_xlabel('MCMC sample',fontsize=16);
+ax1.set_ylabel('$F\_PL$',fontsize=16);
+ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
+ax1.set_ylim((1e10,2.5e11))
+ax1.tick_params(labelsize=16)
+ax1.set_xlim(0,99000)
+ax1.spines['top'].set_visible(False)
+
+f.subplots_adjust(wspace=0)
+
+ax2 = plt.subplot(gs[1])
+n, bins, patches = ax2.hist(data['F_PL'][0],color='C0',bins=binBoundaries,edgecolor='white',orientation="horizontal")
+ax2.axhline(y=interval_FPL[0],color=(0.5,0.5,0.5),linestyle='--')
+ax2.axhline(y=interval_FPL[1],color=(0.5,0.5,0.5),linestyle='--')
+ax2.axhline(y=interval_FPL[2],color=(0.5,0.5,0.5),linestyle='--')
+ax2.set_xlabel('$P(F\_PL)$',fontsize=16);
+ax2.set_ylim((1e10,2.5e11))
+plt.xticks([])
+plt.yticks([])
+
+#set colors for 95% interval
+clrs = ['C0' for xx in bins]
+idxs = bins.argsort()
+idxs = idxs[::-1]
+gray_before = idxs[bins[idxs] < interval_FPL[0]]
+gray_after = idxs[bins[idxs] > interval_FPL[2]]
+for idx in gray_before:
+    clrs[idx] = (.5,.5,.5)
+for idx in gray_after:
+    clrs[idx] = (.5,.5,.5)
+
+for i,p in enumerate(patches):
+    plt.setp(p, 'facecolor', clrs[i+1])
+
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+
+plt.savefig('FPL_trace_hist.png', dpi=500, bbox_inches='tight')
+plt.savefig('FPL_trace_hist.pdf', bbox_inches='tight')
+
 fig, ax = plt.subplots(figsize=(9,3))
 
-plt.plot(data['F_PL'][0])
+plt.plot(range(0,len(data['F_PL'][0]),10),data['F_PL'][0][::10])
 
 plt.yticks(fontsize=16)
 plt.xticks(fontsize=16)
@@ -212,9 +265,62 @@ ax.spines['right'].set_visible(False)
 plt.savefig('F_PL.pdf', bbox_inches='tight')
 plt.savefig('F_PL.png',dpi=500, bbox_inches='tight')
 
+interval_FL = np.percentile(a=data['F_L'][0], q=[2.5, 50.0, 97.5])
+
+hist_legend = mpatches.Patch(color='C1',
+    label = '$F\_L$ = %.1e [%.1e,%.1e] '
+    %(interval_FL[1],interval_FL[0],interval_FL[2]) )
+
+binBoundaries = np.linspace(0.5e9,5e9,70)
+
+f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
+gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1])
+
+ax1 = plt.subplot(gs[0])
+ax1.plot(range(0,len(data['F_L'][0]),10),data['F_L'][0][::10],color='C1')
+ax1.set_xlabel('MCMC sample',fontsize=16);
+ax1.set_ylabel('$F\_L$',fontsize=16);
+ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
+ax1.set_ylim((0.8e9,3e9))
+ax1.tick_params(labelsize=16)
+ax1.set_xlim(0,99000)
+ax1.spines['top'].set_visible(False)
+
+f.subplots_adjust(wspace=0)
+
+ax2 = plt.subplot(gs[1])
+n, bins, patches = ax2.hist(data['F_L'][0],bins=binBoundaries,color='C1',edgecolor='white',orientation="horizontal")
+ax2.axhline(y=interval_FL[0],color=(0.5,0.5,0.5),linestyle='--')
+ax2.axhline(y=interval_FL[1],color=(0.5,0.5,0.5),linestyle='--')
+ax2.axhline(y=interval_FL[2],color=(0.5,0.5,0.5),linestyle='--')
+ax2.set_xlabel('$P(F\_L)$',fontsize=16);
+ax2.set_ylim((0.8e9,3e9))
+plt.xticks([])
+plt.yticks([])
+
+#set colors for 95% interval
+clrs = ['C1' for xx in bins]
+idxs = bins.argsort()
+idxs = idxs[::-1]
+gray_before = idxs[bins[idxs] < interval_FL[0]]
+gray_after = idxs[bins[idxs] > interval_FL[2]]
+for idx in gray_before:
+    clrs[idx] = (.5,.5,.5)
+for idx in gray_after:
+    clrs[idx] = (.5,.5,.5)
+
+for i,p in enumerate(patches):
+    plt.setp(p, 'facecolor', clrs[i+1])
+
+ax2.spines['top'].set_visible(False)
+ax2.spines['right'].set_visible(False)
+
+plt.savefig('FL_trace_hist.png', dpi=500, bbox_inches='tight')
+plt.savefig('FL_trace_hist.pdf', bbox_inches='tight')
+
 fig, ax = plt.subplots(figsize=(9,3))
 
-plt.plot(data['F_L'][0],color='green')
+plt.plot(range(0,len(data['F_L'][0]),10),data['F_L'][0][::10],color='green')
 
 plt.yticks(fontsize=16)
 plt.xticks(fontsize=16)
