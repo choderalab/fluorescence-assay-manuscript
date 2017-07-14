@@ -63,9 +63,9 @@ Below is a description of each set of data.
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase at 0.125 uM
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
-  * `mixing-by-diffusion` - data from time-course fluorescence experiment to test if diffusion can help mixing in-384 well plates
-     * EXTRA MIXING BY DIFFUSION EXPERIMENT - p38 binding assay with 8 fluorescent ligands (different then default set)
-     * After standard protocol, plate was left for diffusion for indicated time and multiple fluorescence reads were performed in time.
+  * `mixing-by-diffusion` - data from time-course fluorescence experiment to test if diffusion can help mixing in 384-well plates
+     * EXTRA MIXING BY DIFFUSION EXPERIMENT - p38 binding assay with 8 fluorescent ligands (different than default set)
+     * After standard protocol, plate was left for diffusion for indicated time and multiple fluorescence reads were taken in time.
      * Performed on June 15-16, 2017
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase

@@ -1,7 +1,7 @@
 # MIXING BY DIFFUSION EXPERIMENT
 
-This experiment was designed to test if diffusion can help mixing in-384 well plates by letting plate incubate and read fluorescence signal at time intervals.
- * p38 binding assay with 8 fluorescent ligands (different then default set)
+This experiment was designed to test if diffusion can help mixing in-384 well plates by letting plate incubate and reading fluorescence signal at time intervals.
+ * p38 binding assay with 8 fluorescent ligands (different than default set)
  * After standard protocol, plate was left for diffusion for indicated time and multiple fluorescence reads were performed in time.
  * Performed on June 15-16, 2017
  * 384 well plate, assay volume 50 uL
