@@ -1,0 +1,83 @@
+Started running Assaytools...
+Skipping analysis of rows:  []
+p38-Lapatinib-IJ
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -9.16 [-10.4,-7.8] k_B T
+Delta G (mean and std after equil):
+   -9.14 +- 0.663 k_B T
+Kd (95% credibility interval after equilibration):
+   104.9 [31.4,411.6] uM
+Kd (mean and std after equil):
+   107.6 uM +- 105.2 uM
+p38-Vandetanib_old-OP
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -12.9 [-14.6,-11.5] k_B T
+Delta G (mean and std after equil):
+   -13 +- 0.845 k_B T
+Kd (95% credibility interval after equilibration):
+   2.4 [0.5,10.3] uM
+Kd (mean and std after equil):
+   2.3 uM +- 3.0 uM
+p38-Ponatinib-KL
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -26.3 [-34.1,-17.6] k_B T
+Delta G (mean and std after equil):
+   -26.2 +- 4.9 k_B T
+Kd (95% credibility interval after equilibration):
+   3.9 [0.0,21751.8] pM
+Kd (mean and std after equil):
+   4.2 pM +- 10016.3 pM
+p38-Bosutinib-AB
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -14.3 [-15.8,-13.1] k_B T
+Delta G (mean and std after equil):
+   -14.4 +- 1.06 k_B T
+Kd (95% credibility interval after equilibration):
+   596.5 [137.3,2139.4] nM
+Kd (mean and std after equil):
+   560.8 nM +- 532.7 nM
+p38-Vandetanib_new-MN
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -13.1 [-14.4,-11.8] k_B T
+Delta G (mean and std after equil):
+   -13.1 +- 0.654 k_B T
+Kd (95% credibility interval after equilibration):
+   2.1 [0.5,7.2] uM
+Kd (mean and std after equil):
+   2.1 uM +- 2.0 uM
+p38-Erlotinib-EF
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -10.2 [-11.4,-8.97] k_B T
+Delta G (mean and std after equil):
+   -10.2 +- 0.597 k_B T
+Kd (95% credibility interval after equilibration):
+   36.1 [11.7,127.2] uM
+Kd (mean and std after equil):
+   36.5 uM +- 28.7 uM
+p38-Gefitinib-GH
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -14.1 [-14.2,-13.9] k_B T
+Delta G (mean and std after equil):
+   -14.1 +- 0.0814 k_B T
+Kd (95% credibility interval after equilibration):
+   765.0 [655.0,889.9] nM
+Kd (mean and std after equil):
+   761.2 nM +- 62.1 nM
+p38-Bosutinib Isomer-CD
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -12.9 [-14,-11.7] k_B T
+Delta G (mean and std after equil):
+   -12.9 +- 0.56 k_B T
+Kd (95% credibility interval after equilibration):
+   2.6 [0.9,7.9] uM
+Kd (mean and std after equil):
+   2.6 uM +- 1.9 uM
+Done.
