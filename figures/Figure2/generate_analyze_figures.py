@@ -111,8 +111,11 @@ f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
 from matplotlib import gridspec
 gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1]) 
 
+# Define nthin for this and all subsequent plots
+nthin = 10
+
 ax1 = plt.subplot(gs[0])
-ax1.plot(range(0,len(data['DeltaG'][0]),10),data['DeltaG'][0][::10],color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353))
+ax1.plot(range(0,len(data['DeltaG'][0]),nthin),data['DeltaG'][0][::nthin],color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353))
 ax1.set_xlabel('MCMC sample',fontsize=16);
 ax1.set_ylabel('$\Delta G$ ($k_B T$)',fontsize=16);
 ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
@@ -151,7 +154,7 @@ f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
 gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1])
 
 ax1 = plt.subplot(gs[0])
-ax1.plot(range(0,len(data['DeltaG'][0]),10),np.exp(data['DeltaG'][0][::10]),color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353))
+ax1.plot(range(0,len(data['DeltaG'][0]),nthin),np.exp(data['DeltaG'][0][::nthin]),color=(0.7372549019607844, 0.5098039215686274, 0.7411764705882353))
 ax1.set_xlabel('MCMC sample',fontsize=16);
 ax1.set_ylabel('$K_{d}$ ($M$)',fontsize=16);
 ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
@@ -209,7 +212,7 @@ f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
 gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1])
 
 ax1 = plt.subplot(gs[0])
-ax1.plot(range(0,len(data['F_PL'][0]),10),data['F_PL'][0][::10],color='C0')
+ax1.plot(range(0,len(data['F_PL'][0]),nthin),data['F_PL'][0][::nthin],color='C0')
 ax1.set_xlabel('MCMC sample',fontsize=16);
 ax1.set_ylabel('$F\_PL$',fontsize=16);
 ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
@@ -252,7 +255,7 @@ plt.savefig('FPL_trace_hist.pdf', bbox_inches='tight')
 
 fig, ax = plt.subplots(figsize=(9,3))
 
-plt.plot(range(0,len(data['F_PL'][0]),10),data['F_PL'][0][::10])
+plt.plot(range(0,len(data['F_PL'][0]),nthin),data['F_PL'][0][::nthin])
 
 plt.yticks(fontsize=16)
 plt.xticks(fontsize=16)
@@ -277,7 +280,7 @@ f, (ax1, ax2) = plt.subplots(1,2, sharey=True,figsize=(10,3))
 gs = gridspec.GridSpec(1, 2, width_ratios=[3, 1])
 
 ax1 = plt.subplot(gs[0])
-ax1.plot(range(0,len(data['F_L'][0]),10),data['F_L'][0][::10],color='C1')
+ax1.plot(range(0,len(data['F_L'][0]),nthin),data['F_L'][0][::nthin],color='C1')
 ax1.set_xlabel('MCMC sample',fontsize=16);
 ax1.set_ylabel('$F\_L$',fontsize=16);
 ax1.legend(handles=[hist_legend],fontsize=14,loc=4,frameon=True)
@@ -320,7 +323,7 @@ plt.savefig('FL_trace_hist.pdf', bbox_inches='tight')
 
 fig, ax = plt.subplots(figsize=(9,3))
 
-plt.plot(range(0,len(data['F_L'][0]),10),data['F_L'][0][::10],color='green')
+plt.plot(range(0,len(data['F_L'][0]),nthin),data['F_L'][0][::nthin],color='green')
 
 plt.yticks(fontsize=16)
 plt.xticks(fontsize=16)
