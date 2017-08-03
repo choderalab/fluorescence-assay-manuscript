@@ -33,7 +33,7 @@ Table summary of the results we have:
 
 Below is a description of each set of data.
 * `singlet` - data from singlet assays (emission and excitation at a single wavelength)
-  * *p38_singlet1_20160420_153238.xml* and *p38_singlet2_20160420_154750.xml*
+  * `DMSO-backfill` - *p38_singlet1_20160420_153238.xml* and *p38_singlet2_20160420_154750.xml*
      * DMSO BACKFILL EXPERIMENT - first half of plate has DMSO backfill, second half does not
      * performed on April 20, 2016
      * 384 well plate, assay volume 50 uL
@@ -57,12 +57,22 @@ Below is a description of each set of data.
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase at 0.25 uM
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
-* *p38_0.125uM_8lig1_20161026_171600* and *p38_0.125uM_8lig2_20161026_173114.xml*
+  * *p38_0.125uM_8lig1_20161026_171600* and *p38_0.125uM_8lig2_20161026_173114.xml*
      * 8 LIGAND EXPERIMENT - at a standard 384-well plate fluorescent kinase inhibitor assay with 8 fluorescent ligands
      * performed on October 26, 2016
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase at 0.125 uM
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
+  * `mixing-by-diffusion` - data from time-course fluorescence experiment to test if diffusion can help mixing in 384-well plates
+     * EXTRA MIXING BY DIFFUSION EXPERIMENT - p38 binding assay with 8 fluorescent ligands (different than default set)
+     * After standard protocol, plate was left for diffusion for indicated time and multiple fluorescence reads were taken in time.
+     * Performed on June 15-16, 2017
+     * 384 well plate, assay volume 50 uL
+     * protein: p38 kinase
+     * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib HCl [EF], Gefitinib [GH], Lapatinib [IJ], Ponatinib [KL], Vandetanib (new stock) [MN], and Vandetanib (old stock) [OP] 
+     * Without DMSO backfill
+     * Time points: 1, 2, 18 and 26 hours after standard plate preparation. 
+
 * `spectra` - data from spectra assays (excitation at a single wavelength, full emission spectra)
   * `Abl`
     * `2015-12-18`
