@@ -3,13 +3,13 @@
 - Lab notebook can be found [here](https://docs.google.com/document/d/1jzL3YV10N1tQ8N6EbT9fJfzEA-G3MmXpPKsbku345gQ/edit#)
 
 #### Plate layout:
-  ! [plate]()
+  ! [plate](https://github.com/choderalab/fluorescence-assay-manuscript/blob/master/data/solubility/images/sls_layout.png)
 
 
 #### D300 Titration Script:
 - Titrates ligands from 20 uM down to 8 nM in a linear step dilution. Titration goes across two rows of the plate for each ligand for a total of 24 data points. Titraiton begins at A1 with 80 uM and goes across to A12, then goes to B1 and across to B12 which is 8 nM. 
 
-  ! [D300]()
+  ! [D300](https://github.com/choderalab/fluorescence-assay-manuscript/blob/master/data/solubility/images/sls_d300.png)
   
   
 #### Ligands Used & Specifications:
@@ -32,4 +32,4 @@ Afatinib | LC Labs | A-8644 | AFT-104 | 439081-18-2 | 485.94
 Neratinib | LC Labs | N-6404 | NRT-103 | 698387-09-6 | 557.04
 
 #### Buffer Details:
-  ! [buffer]()
+  ! [buffer](https://github.com/choderalab/fluorescence-assay-manuscript/blob/master/data/solubility/images/sls_buffer.png)
