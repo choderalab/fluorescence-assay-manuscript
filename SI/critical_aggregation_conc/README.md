@@ -6,6 +6,6 @@ Lab notebook for this experiment is [here](https://docs.google.com/document/d/1j
 
 * The same idea applies to the fluorescence scripts. (Sorry, I don't know how to code so they're not written as well as they could be).
 
-* Raw png's generated from the scripts are uploaded here.
+* Raw pdf's generated from the scripts are uploaded here.
 
 The powerpoint file is the figure draft for the paper.
