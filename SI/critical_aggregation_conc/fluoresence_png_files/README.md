@@ -1,1 +1,1 @@
-Fluorescence png files generated from the python script
+Fluorescence pdf files generated from the python script
