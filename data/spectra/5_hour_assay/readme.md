@@ -6,3 +6,6 @@ Major changes:
   * Only reading at ex 280 nm (cut out 340 nm)
   * Only reading emission wavelengths 440 nm, 480 nm, 520 nm, and 560 nm
   * EVO part of script takes ~ 6 minutes and Infinite takes ~ 6 minutes; assay is bw 4-4.5 hours in length
+
+Old_buffer folder has data/results from the experiment done with buffer that was ~3 months old
+New_buffer folder has data/results from the experiment done with new buffer
