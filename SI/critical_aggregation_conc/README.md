@@ -19,7 +19,7 @@ The powerpoint file is the figure draft for the paper.
 
 
 #### D300 Titration Script:
-- Titrates ligands from 20 uM down to 8 nM in a linear step dilution. Titration goes across two rows of the plate for each ligand for a total of 24 data points. Titraiton begins at A1 with 80 uM and goes across to A12, then goes to B1 and across to B12 which is 8 nM. 
+- Titrates ligands from 80 uM down to 1 uM in a linear step dilution. Titration goes across two rows of the plate for each ligand for a total of 24 data points. Titraiton begins at A1 with 80 uM and goes across to A12, then goes to B1 and across to B12 which is 8 nM. 
 
   ![D300](https://github.com/choderalab/fluorescence-assay-manuscript/blob/master/SI/critical_aggregation_conc/images_for_readme/sls_d300.png)
   
