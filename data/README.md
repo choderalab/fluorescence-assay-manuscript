@@ -119,12 +119,6 @@ Below is a description of each set of data.
        * 96 well plate, assay volume 100 uL
        * protein: Src kinase
        * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], and Gefitinib [GH]
-     * `2019-02-06`
-       * *WT_Src_4ti-0234_new_Bosutinib_20190206_153028.xml*, *WT_Src_4ti-0234_new_Bosutinib_Isomer_20190206_160.xml*, *WT_Src_4ti-0234_new_Erlotinib_20190206_164401.xml*, and *WT_Src_4ti-0234_new_Gefitinib_20190206_172124.xml*
-       * performed on February 6, 2019
-       * 96 well plate, assay volume 100 uL
-       * 0.5 uM protein: Src kinase
-       * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], and Gefitinib [GH]
   * `SrcT338I`
     * *SrcT338I_BosI_20151216_bw2020_gain120_154934.xml*, *SrcT338I_Bos_20151216_bw2020_gain120_152505.xml*, *SrcT338I_Erl_20151216_bw2020_gain120_161404.xml*, and *SrcT338I_Gef_bw2020_gain120_20151216_164154.xml*
     * performed on December 16, 2015
