@@ -24,12 +24,18 @@ Table summary of the results we have:
 | Erl      | YES    | YES |YES   |     YES|YES    |    YES |
 | Gef      | YES     | YES |YES   |     YES |YES    |    YES |
 | Pon      | x | x |x   |      x |YES    |     YES |
-| Lap      | x      |   x |x   |      x |x   |     x |
+| Axi      | x      |   x |x   |      x |YES   |     x |
+| Lap      | x      |   x |x   |      x |YES   |     x |
+| Pal      | x      |   x |x   |      x |YES   |     x |
+| Paz      | x      |   x |x   |      x |YES   |     x |
 | Sar      | x      |   x|x   |      x |x   |    x|
 | Van      | x      |   x |x   |      x |x   |    x |
+| Afa      | x      |    YES |x   |      x |x   |     x|
+| Ner      | x      |    YES |x   |      x |x   |     x|
 | Ima      | x | x|x |x  |YES   |    YES |
 | Das      |x      |   x |x |x  |YES    |    YES |
 | DQA      | x      |    x |x   |      x |YES   |     YES |
+| Staur      | x      |   x |x   |      x |YES   |     x |
 
 Below is a description of each set of data.
 * `single-wavelength` - data from singlet assays (emission and excitation at a single wavelength)
@@ -87,6 +93,12 @@ Below is a description of each set of data.
       * 96 well plate, assay volume 100 uL
       * protein: Abl kinase, note D382N mutant makes kinase catalytically inactive
       * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], and Gefitinib [GH]
+    * `2016-05-26`
+      * *Abl_Afa_20160526_161533.xml*, *Abl_Ner_20160526_165224.xml*
+      * performed on May 26, 2016
+      * 96 well plate, assay volume 100 uL
+      * protein: Abl kinase, note D382N mutant makes kinase catalytically inactive
+      * ligands: Afatinib [AB], Neratinib [CD]
   * `AblT334I`
     * *AblD382N-T334I_BosI_20151217_bw2020_gain120123031.xml*, *AblD382N-T334I_Bos_20151217_bw2020_gain120_120553.xml*, *AblD382N-T334I_Erl_20151217_bw2020_gain120_125515.xml*, and *AblD382N-T334I_Gef_20151217_bw2020_gain120_132641.xml*
     * performed on December 17, 2015
@@ -144,3 +156,17 @@ Below is a description of each set of data.
        * 96 well plate, assay volume 100 uL
        * protein: p38 kinase
        * ligands: Imatinib [AB], Ponatinib [CD], Dasatinib [EF], and diamino-quinazoline [GH]
+     * `2016-12-20`
+       * *p38_Sta_ab_20161220_112406.xml*
+       * performed on December 20, 2016
+       * 96 well plate, assay volume 100 uL
+       * protein: p38 kinase
+       * ligands: Staurosporine[AB]
+	   * Note: The fluorescence excitation and emission values are different than for other experiments, specific to staurosporine's properties.
+     * `2017-01-19`
+       * *p38_Axi_20170119_144258.xml*, *p38_Lap_20170119_152110.xml*, *p38_Pal_20170119_160546.xml*, and *p38_Paz_20170119_164846.xml*
+       * performed on January 19, 2017
+       * 96 well plate, assay volume 100 uL
+       * protein: p38 kinase
+       * ligands: Axitinib [AB], Lapatinib [CD], Palbociclib [EF], and Pazopanib [GH]
+	   * Note: Palbociclib is at a different concentration range due to solibility limitations.
