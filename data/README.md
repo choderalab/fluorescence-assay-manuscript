@@ -144,3 +144,12 @@ Below is a description of each set of data.
        * 96 well plate, assay volume 100 uL
        * protein: p38 kinase
        * ligands: Imatinib [AB], Ponatinib [CD], Dasatinib [EF], and diamino-quinazoline [GH]
+      
+* `single-well-assay` - Data from single-well binding assays (could be single wavelength or spectra)
+  * `20171119_p38_single_well_assay`
+    * performed on November 20, 2017
+    * protein: p38 kinase, 1 uM, dialyzed [column 1-6] vs undialyzed [7-11]
+    * ligands: Bosutinib [row A], Bosutinib Isomer [row B], Gefitinib [row C], Erlotinib [row D], Ponatinib [row E], Lapatinib [row F],   Pazopanib [row G], Axitinib [row H]
+    * fluorescence measurement: single wavelenth measurement of the whole plate, spectra measurement of columns 5 and 6
+    
+
