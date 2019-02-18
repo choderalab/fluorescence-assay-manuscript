@@ -6,7 +6,7 @@
 
 # Run for first spectra assay.
 
-quickmodel --inputs 'inputs_first_spectra'
+quickmodel --inputs 'inputs_first_spectra' --nsamples 10000
 
 mkdir first_spectra
 
@@ -16,7 +16,7 @@ mv *.pickle first_spectra
 
 # Run for first p38 spectra assay.
 
-quickmodel --inputs 'inputs_p38_spectra1'
+quickmodel --inputs 'inputs_p38_spectra1' --nsamples 10000
 
 mkdir first_spectra_p38
 
@@ -26,7 +26,7 @@ mv *.pickle first_spectra_p38
 
 # Run for spectra 2gains assay.
 
-quickmodel --inputs 'inputs_spectra_2gains'
+quickmodel --inputs 'inputs_spectra_2gains' --nsamples 10000
 
 mkdir spectra_2gains
 
@@ -36,7 +36,7 @@ mv *.pickle spectra_2gains
 
 #Run for p38 spectra analysis for other ligands.
 
-quickmodel --inputs 'inputs_p38_spectra_otherligs'
+quickmodel --inputs 'inputs_p38_spectra_otherligs' --nsamples 10000
 
 mkdir first_p38_otherligs
 
@@ -46,7 +46,7 @@ mv *.pickle first_p38_otherligs
 
 # Run for CAII spectra analysis for other ligands.
 
-quickmodel --inputs 'inputs_CAII_spectra_otherligs'
+quickmodel --inputs 'inputs_CAII_spectra_otherligs' --nsamples 10000
 
 mkdir first_CAII_otherligs
 
@@ -56,7 +56,7 @@ mv *.pickle first_CAII_otherligs
 
 # Run for singlet assay with 4 ligands and DMSO backfill
 
-quickmodel --inputs 'inputs_DMSO' 
+quickmodel --inputs 'inputs_DMSO' --nsamples 10000
 
 mkdir DMSO-backfill
 
@@ -66,7 +66,7 @@ mv *.pickle DMSO-backfill
 
 # Run for singlet assay with 8 different ligands
 
-quickmodel --inputs 'inputs_8ligs'
+quickmodel --inputs 'inputs_8ligs' --nsamples 10000
 
 mkdir 8ligs
 
@@ -76,7 +76,7 @@ mv *.pickle 8ligs
 
 # Run for singlet assay with 8 different ligands and 0.5uM of protein
 
-quickmodel --inputs 'inputs_8ligs_0.5_protein_concentration'
+quickmodel --inputs 'inputs_8ligs_0.5_protein_concentration' --nsamples 10000
 
 mkdir 8ligs_0.5_protein_concentration
 
@@ -86,7 +86,7 @@ mv *.pickle 8ligs_0.5_protein_concentration
 
 # Run for singlet assay with 8 different ligands and 0.25uM of protein
 
-quickmodel --inputs 'inputs_8ligs_0.25_protein_concentration'
+quickmodel --inputs 'inputs_8ligs_0.25_protein_concentration' --nsamples 10000
 
 mkdir 8ligs_0.25_protein_concentration
 
@@ -96,7 +96,7 @@ mv *.pickle 8ligs_0.25_protein_concentration
 
 # Run for singlet assay with 8 different ligands and 0.125uM of protein
 
-quickmodel --inputs 'inputs_8ligs_0.125_protein_concentration'
+quickmodel --inputs 'inputs_8ligs_0.125_protein_concentration' --nsamples 10000
 
 mkdir 8ligs_0.125_protein_concentration
 
