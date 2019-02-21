@@ -160,7 +160,7 @@ plt.savefig('p38-Ponatinib-log-inset.png',dpi=500)
 plt.savefig('p38-Ponatinib-log-inset.pdf')
 
 lines = [320,360]
-file_set = {'p38': "/Users/hansons/Documents/Desktop-MOVE/new_compounds/p38_Paz_20170119_164846.xml"}
+file_set = {'p38': "../../data/spectra/p38/2017-01-19/p38_Paz_20170119_164846.xml"}
 ligands = ['Pazopanib']
 plot_spectra_grid_advanced_inset(file_set,'p38',ligands,'Pazopanib',1,ylim,lines,Lstated)
 plt.savefig('p38-Pazopanib-log-inset-320-360.png',dpi=500)

@@ -3,7 +3,7 @@ Raw data for fluorescence assay manuscript.
 
 Table summary of the results we have:
 
-| SINGLET  |  Src   | Abl   | Src GK  | Abl GK  | p38   | CA II  |
+| SINGLE WAVELENGTH  |  Src   | Abl   | Src GK  | Abl GK  | p38   | CA II  |
 |:--------:|:------:|:-----:|:-------:|:-------:|:-----:|------- |
 | Bos      | x      | x     | x       | x       | YES   |   x    |
 | Bsi      | x      | x     | x       | x       | YES   |   x    |
@@ -24,15 +24,21 @@ Table summary of the results we have:
 | Erl      | YES    | YES |YES   |     YES|YES    |    YES |
 | Gef      | YES     | YES |YES   |     YES |YES    |    YES |
 | Pon      | x | x |x   |      x |YES    |     YES |
-| Lap      | x      |   x |x   |      x |x   |     x |
+| Axi      | x      |   x |x   |      x |YES   |     x |
+| Lap      | x      |   x |x   |      x |YES   |     x |
+| Pal      | x      |   x |x   |      x |YES   |     x |
+| Paz      | x      |   x |x   |      x |YES   |     x |
 | Sar      | x      |   x|x   |      x |x   |    x|
 | Van      | x      |   x |x   |      x |x   |    x |
+| Afa      | x      |    YES |x   |      x |x   |     x|
+| Ner      | x      |    YES |x   |      x |x   |     x|
 | Ima      | x | x|x |x  |YES   |    YES |
 | Das      |x      |   x |x |x  |YES    |    YES |
 | DQA      | x      |    x |x   |      x |YES   |     YES |
+| Staur      | x      |   x |x   |      x |YES   |     x |
 
 Below is a description of each set of data.
-* `singlet` - data from singlet assays (emission and excitation at a single wavelength)
+* `single-wavelength` - data from singlet assays (emission and excitation at a single wavelength)
   * `DMSO-backfill` - *p38_singlet1_20160420_153238.xml* and *p38_singlet2_20160420_154750.xml*
      * DMSO BACKFILL EXPERIMENT - first half of plate has DMSO backfill, second half does not
      * performed on April 20, 2016
@@ -45,19 +51,19 @@ Below is a description of each set of data.
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase 
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
-  * *p38_0.5uM_8lig1_20161026_132449.xml* and *p38_0.5uM_8lig2_20161026_134006.xml*
+  * `p38_0.5uM` - *p38_0.5uM_8lig1_20161026_132449.xml* and *p38_0.5uM_8lig2_20161026_134006.xml*
      * 8 LIGAND EXPERIMENT - at a standard 384-well plate fluorescent kinase inhibitor assay with 8 fluorescent ligands
      * performed on October 26, 2016
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase at 0.5 uM
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
-  * *p38_0.25uM_8lig1_20161026_155648* and *p38_0.25uM_8lig2_20161026_161159.xml*
+  * `p38_0.25uM` - *p38_0.25uM_8lig1_20161026_155648* and *p38_0.25uM_8lig2_20161026_161159.xml*
      * 8 LIGAND EXPERIMENT - at a standard 384-well plate fluorescent kinase inhibitor assay with 8 fluorescent ligands
      * performed on October 26, 2016
      * 384 well plate, assay volume 50 uL
      * protein: p38 kinase at 0.25 uM
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH], Ponatinib [IJ], Lapatinib [KL], Saracatinib [MN], and Vandetanib [OP]
-  * *p38_0.125uM_8lig1_20161026_171600* and *p38_0.125uM_8lig2_20161026_173114.xml*
+  * `p38_0.125uM` - *p38_0.125uM_8lig1_20161026_171600* and *p38_0.125uM_8lig2_20161026_173114.xml*
      * 8 LIGAND EXPERIMENT - at a standard 384-well plate fluorescent kinase inhibitor assay with 8 fluorescent ligands
      * performed on October 26, 2016
      * 384 well plate, assay volume 50 uL
@@ -87,6 +93,12 @@ Below is a description of each set of data.
       * 96 well plate, assay volume 100 uL
       * protein: Abl kinase, note D382N mutant makes kinase catalytically inactive
       * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], and Gefitinib [GH]
+    * `2016-05-26`
+      * *Abl_Afa_20160526_161533.xml*, *Abl_Ner_20160526_165224.xml*
+      * performed on May 26, 2016
+      * 96 well plate, assay volume 100 uL
+      * protein: Abl kinase, note D382N mutant makes kinase catalytically inactive
+      * ligands: Afatinib [AB], Neratinib [CD]
   * `AblT334I`
     * *AblD382N-T334I_BosI_20151217_bw2020_gain120123031.xml*, *AblD382N-T334I_Bos_20151217_bw2020_gain120_120553.xml*, *AblD382N-T334I_Erl_20151217_bw2020_gain120_125515.xml*, and *AblD382N-T334I_Gef_20151217_bw2020_gain120_132641.xml*
     * performed on December 17, 2015
@@ -144,12 +156,17 @@ Below is a description of each set of data.
        * 96 well plate, assay volume 100 uL
        * protein: p38 kinase
        * ligands: Imatinib [AB], Ponatinib [CD], Dasatinib [EF], and diamino-quinazoline [GH]
-      
-* `single-well-assay` - Data from single-well binding assays (could be single wavelength or spectra)
-  * `20171119_p38_single_well_assay`
-    * performed on November 20, 2017
-    * protein: p38 kinase, 1 uM, dialyzed [column 1-6] vs undialyzed [7-11]
-    * ligands: Bosutinib [row A], Bosutinib Isomer [row B], Gefitinib [row C], Erlotinib [row D], Ponatinib [row E], Lapatinib [row F],   Pazopanib [row G], Axitinib [row H]
-    * fluorescence measurement: single wavelenth measurement of the whole plate, spectra measurement of columns 5 and 6
-    
-
+     * `2016-12-20`
+       * *p38_Sta_ab_20161220_112406.xml*
+       * performed on December 20, 2016
+       * 96 well plate, assay volume 100 uL
+       * protein: p38 kinase
+       * ligands: Staurosporine[AB]
+	   * Note: The fluorescence excitation and emission values are different than for other experiments, specific to staurosporine's properties.
+     * `2017-01-19`
+       * *p38_Axi_20170119_144258.xml*, *p38_Lap_20170119_152110.xml*, *p38_Pal_20170119_160546.xml*, and *p38_Paz_20170119_164846.xml*
+       * performed on January 19, 2017
+       * 96 well plate, assay volume 100 uL
+       * protein: p38 kinase
+       * ligands: Axitinib [AB], Lapatinib [CD], Palbociclib [EF], and Pazopanib [GH]
+	   * Note: Palbociclib is at a different concentration range due to solibility limitations.
