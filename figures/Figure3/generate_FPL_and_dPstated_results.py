@@ -13,6 +13,7 @@ import matplotlib.patches as mpatches
 import seaborn as sns
 
 import traceback
+import cPickle
 
 sns.set(style='white')
 sns.set_context('talk')
@@ -107,8 +108,18 @@ dLstated = 0.08 * inputs['Lstated'] # ligand concentraiton uncertainty (due to g
 
 names = ['Src-Erlotinib-EF']
 
-# Now lets use these inputs and run pymc three times for our data of interest and see how consistent our results are!
-F_PL_def = {'Src-Erlotinib-EF': 59601584903.0}
+# Here we are importing the mean value of F_PL from a previous run of assaytools on
+# a different Src-Erlotinib experiment from 2016-03-09 using quickmodel, this is
+# also analyzed as spectra_2gains in the analysis folder.
+
+data_file = '../../analysis/bayes/spectra_2gains/Src-Erlotinib-EF_mcmc-2017-04-13 14:54.pickle'
+# load data from pickle file
+with open(r'%s'%data_file,'rb') as my_file:
+    data = cPickle.load(my_file)
+
+F_PL_mean = data['F_PL'][0].mean()
+F_PL_def = {'Src-Erlotinib-EF': F_PL_mean}
+print(F_PL_def)
 
 iterations = 1
 
