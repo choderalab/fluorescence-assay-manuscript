@@ -229,7 +229,7 @@ plt.hist(np.exp(p38_Bsi_data['DeltaG'][0]),facecolor=cols[1],bins=kd_binBoundari
 plt.hist(np.exp(p38_Erl_data['DeltaG'][0]),facecolor=cols[2],bins=kd_binBoundaries,edgecolor='white',alpha=0.9,label='p38:Erlotinib')
 plt.hist(np.exp(p38_Gef_data['DeltaG'][0]),facecolor=cols[3],bins=kd_binBoundaries,edgecolor='white',alpha=0.9,label='p38:Gefitinib')
 
-plt.hist(np.exp(p38_Pon_data['DeltaG'][0]),facecolor=cols[4],bins=kd_binBoundaries,edgecolor='white',alpha=0.9,label='p38:Ponabitib')
+plt.hist(np.exp(p38_Pon_data['DeltaG'][0]),facecolor=cols[4],bins=kd_binBoundaries,edgecolor='white',alpha=0.9,label='p38:Ponatinib')
 plt.hist(np.exp(p38_Lap_data['DeltaG'][0]),facecolor=cols[5],bins=kd_binBoundaries,edgecolor='white',alpha=0.9,label='p38:Lapatinib')
 plt.hist(np.exp(p38_Paz_data['DeltaG'][0]),facecolor=cols[6],bins=kd_binBoundaries,edgecolor='white',alpha=0.9,label='p38:Pazopanib')
 plt.hist(np.exp(p38_Axi_data['DeltaG'][0]),facecolor=cols[7],bins=kd_binBoundaries,edgecolor='white',alpha=0.9,label='p38:Axitinib')
