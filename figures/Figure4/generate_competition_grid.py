@@ -45,9 +45,10 @@ def three_component_competitive_binding(Ptot, Ltot, Kd_L, Atot, Kd_A):
     A = Atot - PL; # free competitive ligand concentration in sample cell after n injections (uM)
     return [P, L, A, PL, Kd_L_app]
 
-Kd_Bos = 1.0e-9 # M
-Kd_Gef = 3800e-9 # M
-Kd_Ima = 3000e-9 # M
+#These are binding affinities to ABL1-nonphosphorylated according to guidetopharmacology.org
+Kd_Bos = 0.1e-9 # M
+Kd_Gef = 2200e-9 # M
+Kd_Ima = 1.1e-9 # M
 
 Ptot = 0.5e-6 # M
 Ltot = 20.0e-6 / np.array([10**(float(i)/2.0) for i in range(12)]) # M
@@ -78,9 +79,35 @@ plt.ylabel('non-fluorescent ligand concentration (M)')
 plt.xticks(np.arange(0.5, 12.5),Ltot_visual,rotation='vertical');
 plt.yticks(np.arange(0.5, 12.5),concentration_range);
 plt.ylim((0, len(concentration_range)))
-plt.title('Competition Grid for Gefitinib X Imatinib in 0.5 uM Src')
+plt.title('Competition Grid for Gefitinib X Imatinib in 0.5 uM Abl')
 plt.colorbar(label='complex concentration (M)');
 plt.tight_layout()
 
 plt.savefig('competition_grid.png', dpi=500)
 plt.savefig('competition_grid.pdf')
+
+plt.clf()
+
+colors = ['cyan','blue','green','yellowgreen','gold','orange','red','maroon']
+
+sns.set(style='white')
+sns.set_context('talk')
+
+
+fig, ax = plt.subplots(figsize=(8,4))
+for i in range(len(competition_grid_gefitinib)):
+    plt.semilogx(Ltot, competition_grid_gefitinib[i],color=colors[i],label=concentration_range[i]);
+handles, labels = ax.get_legend_handles_labels()
+plt.legend(reversed(handles), reversed(labels), title='[Ima] (M)');
+plt.xlabel('$[L]_T$ (M)',fontsize=16);
+plt.yticks([])
+plt.xticks(fontsize=16)
+plt.xlim((2e-9,5e-5))
+plt.ylabel('Fluorescence',fontsize=20);
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+plt.tight_layout()
+
+plt.savefig('competition_curves.png', dpi=500)
+plt.savefig('competition_curves.pdf')
