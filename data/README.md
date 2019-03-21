@@ -16,6 +16,7 @@ Table summary of the results we have:
 | Ima      | x      | x |x   |      x |x      |     x |
 | Das      | x      |   x |x   |      x|x      |     x |
 | DQA      | x      |    x |x   |     x |x      |    x |
+| Stauro   | x      | x     | x    | x     | x     | x     |
 
 |   SPECTRA     |  Src     | Abl   |  Src GK   | Abl GK  | p38   | CA II  |
 |:-------------:|:--------:|:-----:|:---------:|:-------:|:-----:|------- |
@@ -30,6 +31,7 @@ Table summary of the results we have:
 | Ima      | x | x|x |x  |YES   |    YES |
 | Das      |x      |   x |x |x  |YES    |    YES |
 | DQA      | x      |    x |x   |      x |YES   |     YES |
+| Stauro   | x      | x     | x    | x     | x     | x     |
 
 Below is a description of each set of data.
 * `singlet` - data from singlet assays (emission and excitation at a single wavelength)
