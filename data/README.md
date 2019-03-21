@@ -5,10 +5,10 @@ Table summary of the results we have:
 
 | SINGLET  |  Src   | Abl   | Src GK  | Abl GK  | p38   | CA II  |
 |:--------:|:------:|:-----:|:-------:|:-------:|:-----:|------- |
-| Bos      | x      | x     | x       | x       | YES   |   x    |
-| Bsi      | x      | x     | x       | x       | YES   |   x    |
-| Erl      | x      | x     | x       | x       | YES   |   x    |
-| Gef      | x      | x     | x       | x       | YES   |   x    |
+| Bos      | YES      | YES     | YES       | YES       | YES   |   x    |
+| Bsi      | YES      | YES    | YES       | YES      | YES   |   x    |
+| Erl      | YES      | YES     | YES      | YES       | YES   |   x    |
+| Gef      | YES      | YES    | YES       | YES       | YES   |   x    |
 | Pon      | x      | x     | x       | x       | YES   |   x    |
 | Lap      | x      | x     | x       | x       | YES   |   x    |
 | Sar      | x      |    x |x  |     x |YES    |    x |
@@ -72,6 +72,14 @@ Below is a description of each set of data.
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib HCl [EF], Gefitinib [GH], Lapatinib [IJ], Ponatinib [KL], Vandetanib (new stock) [MN], and Vandetanib (old stock) [OP] 
      * Without DMSO backfill
      * Time points: 1, 2, 18 and 26 hours after standard plate preparation. 
+  * `single Well, single wavelength` 
+      * `2019-03-07`
+           * *p38_Abl_WT&GK_Src_WT&GK_conc_0_20190307_111234.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_1_20190307_112351.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_2_20190307_113345.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_3_20190307_114336.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_4_20190307_115329.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_5_20190307_120322.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_6_20190307_121315.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_7_20190307_122657.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_8_20190307_123649.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_9_20190307_124642.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_10_20190307_125635.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_11_20190307_130625.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_12_20190307_131618.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_13_20190307_132611.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_14_20190307_133612.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_15_20190307_134607.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_16_20190307_135607.xml*
+           * 4 ligand experiment with 5 proteins- a standard 96-well plate fluorescent kinase inhibitor assay with 4 fluorescent ligands
+           * performed on March 7, 2019 by EEG
+           * 96 well non-binding plate (Corning 3651) , assay volume 100 uL
+           * protein: p38 kinase at 0.5 uM, Abl WT kinase at 0.5 uM, Abl GK kinase at 0.5 uM, Src WT kinase at 0.5 uM, and Src GK kinase at 0.5 uM
+           * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH]
      
 * `spectra` - data from spectra assays (excitation at a single wavelength, full emission spectra)
   * `Abl`
@@ -150,12 +158,3 @@ Below is a description of each set of data.
        * 96 well plate, assay volume 100 uL
        * protein: p38 kinase
        * ligands: Imatinib [AB], Ponatinib [CD], Dasatinib [EF], and diamino-quinazoline [GH]
-       
- * `Single Well, Single Wavelength` 
-      * `2019-03-07`
-        * *p38_Abl_WT&GK_Src_WT&GK_conc_0_20190307_111234.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_1_20190307_112351.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_2_20190307_113345.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_3_20190307_114336.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_4_20190307_115329.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_5_20190307_120322.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_6_20190307_121315.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_7_20190307_122657.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_8_20190307_123649.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_9_20190307_124642.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_10_20190307_125635.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_11_20190307_130625.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_12_20190307_131618.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_13_20190307_132611.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_14_20190307_133612.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_15_20190307_134607.xml*, *p38_Abl_WT&GK_Src_WT&GK_conc_16_20190307_135607.xml*
-        * 4 ligand experiment with 5 proteins- a standard 96-well plate fluorescent kinase inhibitor assay with 4 fluorescent ligands
-        * performed on March 7, 2019 by EEG
-        * 96 well non-binding plate (Corning 3651) , assay volume 100 uL
-        * protein: p38 kinase at 0.5 uM, Abl WT kinase at 0.5 uM, Abl GK kinase at 0.5 uM, Src WT kinase at 0.5 uM, and Src GK kinase at 0.5 uM
-        * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH]
