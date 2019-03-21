@@ -82,6 +82,7 @@ Below is a description of each set of data.
            * 96 well non-binding plate (Corning 3651) , assay volume 100 uL
            * protein: p38 kinase at 0.5 uM, Abl WT kinase at 0.5 uM, Abl GK kinase at 0.5 uM, Src WT kinase at 0.5 uM, and Src GK kinase at 0.5 uM
            * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH]
+           * excitation 280 nm/ emission 480 nm
       * `2019-03-21`
            * *p38_Abl_WT_GK_Src_WT_GK_conc_0_20190321_102224.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_1_20190321_103449.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_2_20190321_104553.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_3_20190321_105653.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_4_20190321_110707.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_5_20190321_111857.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_6_20190321_112957.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_7_20190321_115952.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_8_20190321_120956.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_9_20190321_122005.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_10_20190321_123101.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_11_20190321_124228.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_12_20190321_125311.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_13_20190321_130410.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_14_20190321_131514.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_15_20190321_132622.xml*, *p38_Abl_WT_GK_Src_WT_GK_conc_16_20190321_133706.xml*
            * 4 ligand experiment with 5 proteins- a standard 96-well plate fluorescent kinase inhibitor assay with 4 fluorescent ligands
@@ -89,6 +90,7 @@ Below is a description of each set of data.
            * 96 well non-binding plate (Corning 3651) , assay volume 100 uL
            * protein: p38 kinase at 0.5 uM, Abl WT kinase at 0.5 uM, Abl GK kinase at 0.5 uM, Src WT kinase at 0.5 uM, and Src GK kinase at 0.5 uM
            * ligands: Dasatinib [AB], Imatinib [CD], Ponatinib [EF], Staurosporine [GH]
+           * 3 wavelengths analyzed to account for ponatinib & staurosporine fluorescence properties. Ex 280 nm/Em 480, Ex 280 nm/Em 420 nm, and Ex 296 nm/Em 396 nm
      
 * `spectra` - data from spectra assays (excitation at a single wavelength, full emission spectra)
   * `Abl`
