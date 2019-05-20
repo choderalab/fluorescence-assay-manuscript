@@ -1,1 +1,3 @@
-### Figure caption for SI figure about plate types.
+## Figure caption.
+
+**Various plate types used for the assay resulted in different levels of background fluorescence.** **A.** Plate A, the 96-well, clear polystyrene UltraVision plate with a UV base from 4titude, resulted in the lowest background signal- the level of fluorescence when no ligand has been titrated into the protein solution. This plate resulted in a background fluorescence intensity of ~ 400 rfu. Plate B, the black 96-well plate with a clear bottom treated with proprietary non-binding technology from Corning, resulted in the highest background signal. This plate resulted in a background fluorescence intensity of ~ 2700 rfu.
