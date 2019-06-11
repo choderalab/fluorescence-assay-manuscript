@@ -1,0 +1,1 @@
+### This experiment was done with 0.5 uM p38, 0.5 uM Abl D382N (WT), 0.5 uM Abl D382N/T334I (GK mutant), 0.5 uM Src WT, and 0.5 uM Src T338I (GK mutant). Ligands were Bosutinib (rows A & B), Bosutinib Isomer (rows C & D), Erlotinib (rows E & F), and Gefitinib (rows G & H). 
