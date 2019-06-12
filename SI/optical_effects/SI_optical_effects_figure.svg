@@ -2788,8 +2788,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.514186"
-     inkscape:cx="435.06279"
+     inkscape:zoom="1.7"
+     inkscape:cx="-207.47117"
      inkscape:cy="359.62824"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -2797,7 +2797,7 @@
      units="in"
      inkscape:window-width="1866"
      inkscape:window-height="1296"
-     inkscape:window-x="0"
+     inkscape:window-x="1657"
      inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
@@ -2827,7 +2827,7 @@
          y="412.31561"
          x="16.15332"
          id="tspan4248"
-         sodipodi:role="line">B</tspan></text>
+         sodipodi:role="line">A</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4537"
@@ -10877,6 +10877,6 @@
          sodipodi:role="line"
          id="tspan4491"
          x="16.369995"
-         y="662.81537">C</tspan></text>
+         y="662.81537">B</tspan></text>
   </g>
 </svg>
