@@ -4,8 +4,8 @@
 Files for the data used in Figures 3, 5, S6, and some additional data not shown in the paper. In the JSON files, kD values are given in the third line. Values are stated in units of mM, uM, nM, pM, or fM. For the purposes of data comparison, all values were converted to uM. 
 
 #### Summary Table:
-| Figure # | Protein:Ligand Pair | Assay Format | Date of Experiment |Dialysis | Plate Type  kD Mean (uM) | kD SD (uM) | 
-| ---------| ------------------- | -------------| ------------------ | --------| ----- | ------------ | ---------- | ------| ------- |
+| Figure # | Protein:Ligand Pair | Assay Format | Date of Experiment |Dialysis | Plate Type | kD Mean (uM) | kD SD (uM) | 
+| ---------| ------------------- | -------------| ------------------ | ------- | ---------- | ------| ------- |
 | 3 | Src:Bosutinib | Multiple Well | 2015-12-15 | no | 4ti-0234 | 0.0000105 | 0.0149606 |
 | S6 | Src:Bosutinib | Single Well | 2019-03-07 | yes | Corning 3651 | 0.0000033 | 0.0059627 |
 | 3 | Src:Bosutinib Isomer | Multiple Well | 2015-12-15 | no | 4ti-0234 | 0.0000144 | 0.0143526 |
