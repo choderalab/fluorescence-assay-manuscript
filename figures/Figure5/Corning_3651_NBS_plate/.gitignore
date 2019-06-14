@@ -1,0 +1,2 @@
+# Ignore the pickle files of Quickmodel analysis because they are too large
+./pickle_Perror_0_15/
