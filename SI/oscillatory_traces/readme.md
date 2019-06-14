@@ -1,6 +1,6 @@
 # Experiments relating to oscillatory binding traces
 
-### These experiments were done by EEG from December 2018 - May 2019.
+### These experiments were done by EEG.
 
 #### Plate layout for all single well experiments is according to the plate type excel file in this folder, unless otherwise stated. In all single well experiments, wells A1, C1, E1, and G1 are empty.
 
