@@ -1,0 +1,98 @@
+Sender: LSF System <lsfadmin@lt21>
+Subject: Job 9351397: <erl_100k_dP> in cluster <lila> Done
+
+Job <erl_100k_dP> was submitted from host <lilac> by user <grundye> in cluster <lila> at Fri May 17 13:48:09 2019
+Job was executed on host(s) <lt21>, in queue <cpuqueue>, as user <grundye> in cluster <lila> at Fri May 17 13:48:10 2019
+</home/grundye> was used as the home directory.
+</home/grundye/EXPERIMENTS/kinase_inhibitors_and_assaytools/20190517_SMH_fig_3_corrected_L_stated_right_files/inputs/erl> was used as the working directory.
+Started at Fri May 17 13:48:10 2019
+Terminated at Fri May 17 20:02:24 2019
+Results reported at Fri May 17 20:02:24 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J erl_100k_dP
+#BSUB -n 1
+#BSUB -R span[ptile=1]
+#BSUB -R rusage[mem=8]
+#BSUB -W 8:00
+#BSUB -o %J.stdout
+#BSUB -eo %J.stderr
+
+# make sure job’s submission CWD path can be accessed on the job’s execution host 
+cd $LS_SUBCWD
+
+# Activate the environment where Assaytools is installed
+source activate assaytools_af411f0
+
+# Export current conda environment requirements
+conda list --export > requirements.txt
+
+# Run my program
+echo “Started running Assaytools...”
+quickmodel --inputs inputs_spectra_erl --type spectra --nsamples 100000
+echo “Done.”
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   22443.95 sec.
+    Max Memory :                                 1 GB
+    Average Memory :                             0.65 GB
+    Total Requested Memory :                     8.00 GB
+    Delta Memory :                               7.00 GB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                141
+    Run time :                                   22454 sec.
+    Turnaround time :                            22455 sec.
+
+The output (if any) follows:
+
+“Started running Assaytools...”
+Skipping analysis of rows:  ['A', 'B', 'C', 'D', 'G', 'H']
+Skipping analysis of rows:  ['A', 'B', 'C', 'D', 'G', 'H']
+Skipping analysis of rows:  ['A', 'B', 'C', 'D', 'G', 'H']
+Src-Erlotinib-EF
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -15.2 [-32.7,-12.8] k_B T
+Delta G (mean and std after equil):
+   -17.5 +- 5.39 k_B T
+Kd (95% credibility interval after equilibration):
+   259.8 [0.0,2726.5] nM
+Kd (mean and std after equil):
+   26.2 nM +- 954.0 nM
+p38-Erlotinib-EF
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -5.3 [-12.5,-0.272] k_B T
+Delta G (mean and std after equil):
+   -5.62 +- 3.89 k_B T
+Kd (95% credibility interval after equilibration):
+   5.0 [0.0,761.6] mM
+Kd (mean and std after equil):
+   3.6 mM +- 194.6 mM
+Abl-Erlotinib-EF
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -22.9 [-34,-14.5] k_B T
+Delta G (mean and std after equil):
+   -23.4 +- 6.09 k_B T
+Kd (95% credibility interval after equilibration):
+   114.6 [0.0,501207.1] pM
+Kd (mean and std after equil):
+   70.9 pM +- 178562.0 pM
+“Done.”
+
+
+PS:
+
+Read file <9351397.stderr> for stderr output of this job.
+
