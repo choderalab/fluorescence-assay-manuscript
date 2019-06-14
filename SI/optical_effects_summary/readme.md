@@ -9,4 +9,4 @@
 
 * **Date**: 17 June 2017
 * **Protein**: 0.5 uM p38
-* **0.05% Tween-20e**: rows I, J, K, L, M, N, O, P
+* **0.05% Tween-20**: rows I, J, K, L, M, N, O, P
