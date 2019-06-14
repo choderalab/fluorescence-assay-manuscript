@@ -2,7 +2,7 @@ This series of experiments was done by Mehtap and Erin Sept-Oct 2018.
 
 * There are two analysis scripts to analyze the data the way the plate layouts were done. One (multiple ligands) can be used to analyze multiple ligands at once, but the ligands need to be in the same wells in each of the Infinite files. The other (one ligand) can be used to analyze a single ligand that changed wells (ie was in rows A & B in one experiment but in E & F in another experiment). Both are in this folder.
 
-* The same idea applies to the fluorescence scripts. (Sorry, I don't know how to code so they're not written as well as they could be).
+* The same idea applies to the fluorescence scripts. 
 
 * Raw pdf's generated from the scripts are uploaded here.
 
