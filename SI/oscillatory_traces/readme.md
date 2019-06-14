@@ -2,7 +2,7 @@
 
 ### These experiments were done by EEG.
 
-#### Plate layout for all single well experiments is according to the plate type excel file in this folder, unless otherwise stated. In all single well experiments, wells A1, C1, E1, and G1 are empty.
+#### Plate layout for all single well experiments is according to the plate type excel file in this folder, unless otherwise stated. In multiple well experiments, only one protein is used. In all single well experiments, wells A1, C1, E1, and G1 are empty.
 
 ## Experiments:
 
