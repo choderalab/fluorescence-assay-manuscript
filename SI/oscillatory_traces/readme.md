@@ -6,7 +6,7 @@
 
 ## Experiments:
 
-### In all experiments, Bosutinib was dispensed into rows A & B, Bosutinib Isomer was dispensed into rows C & D, Erlotinib was dispensed into rows E & F, and Gefitinib was dispensed into rows G & H. 
+#### In all experiments, Bosutinib was dispensed into rows A & B, Bosutinib Isomer was dispensed into rows C & D, Erlotinib was dispensed into rows E & F, and Gefitinib was dispensed into rows G & H. 
 
 * **Single Well, No Dialysis**
   * **Date**: 11 December 2018
