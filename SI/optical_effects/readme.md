@@ -12,13 +12,13 @@
 * **Protein**: 0.5 uM p38
 * **0.05% Tween-20**: rows I, J, K, L, M, N, O, P
 
-#### Bosutinib was dispensed into rows A & B, Bosutinib Isomer was dispensed into rows C & D, Erlotinib was dispensed into rows E & F, and Gefitinib was dispensed into rows G & H. 
+#### Bosutinib was dispensed into rows A & B, Bosutinib Isomer was dispensed into rows C & D, Erlotinib was dispensed into rows E & F, and Gefitinib was dispensed into rows G & H. See excel file in this folder for the plate layout. Wells A1, C1, E1, and G1 are empty. 
 
 * **Date**: 7 March 2019
 * **Type**: Single well
 * **Proteins**: 
-  * 0.5 uM p38 (rows A, C, E, G in cols 10, 11, and 12)
-  * 0.5 uM Abl D382N (WT) (rows B, D, F, H in cols 1, 2, and 3)
-  * 0.5 uM Abl D382N and T334I (GK mutant) (rows B, D, F, H in cols 4, 5, and 6)
-  * 0.5 uM Src WT (rows B, D, F, H in cols 7, 8, and 9)
-  * 0.5 uM Src T338I (GK mutant) (rows B, D, F, H in cols 10, 11, and 12)
+  * 0.5 uM p38 
+  * 0.5 uM Abl D382N (WT) 
+  * 0.5 uM Abl D382N and T334I (GK mutant) 
+  * 0.5 uM Src WT 
+  * 0.5 uM Src T338I (GK mutant) 
