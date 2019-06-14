@@ -7,11 +7,11 @@ Files for the data used in Figures 3, 5, S6, and some additional data not shown 
 | Figure # | Protein:Ligand Pair | Assay Format | Date of Experiment |Dialysis | Plate Type | kD Mean (uM) | kD SD (uM) | 
 | ---------| ------------------- | -------------| ------------------ | ------- | ---------- | ------| ------- |
 | 3 | Src:Bosutinib | Multiple Well | 2015-12-15 | no | 4ti-0234 | 0.0000105 | 0.0149606 |
-| S6 | Src:Bosutinib | Single Well | 2019-03-07 | yes | Corning 3651 | 0.0000033 | 0.0059627 |
+| S12 | Src:Bosutinib | Single Well | 2019-03-07 | yes | Corning 3651 | 0.0000033 | 0.0059627 |
 | 3 | Src:Bosutinib Isomer | Multiple Well | 2015-12-15 | no | 4ti-0234 | 0.0000144 | 0.0143526 |
-| S6 | Src:Bosutinib Isomer | Single Well | 2019-03-07 | yes | Corning 3651  |  0.000003 | 0.0018331 |
+| S12 | Src:Bosutinib Isomer | Single Well | 2019-03-07 | yes | Corning 3651  |  0.000003 | 0.0018331 |
 | 3 | Src:Erlotinib | Multiple Well | 2015-12-15 | no | 4ti-0234  | 0.0262 | 0.954 |
-| S6 | Src:Erlotinib | Single Well | 2019-03-07 | yes | Corning 3651  | 0.1277 | 0.0853 |
+| S12 | Src:Erlotinib | Single Well | 2019-03-07 | yes | Corning 3651  | 0.1277 | 0.0853 |
 | 3 | Src:Gefitinib | Multiple Well | 2015-12-15 | no | 4ti-0234  | 6.6 | 3 |
 | not shown | Src:Gefitinib | Single Well | 2019-03-07 | yes | Corning 3651  | 0.9623 | 0.6043 |
 | 3 | Abl:Bosutinib | Multiple Well | 2015-12-15 | no | 4ti-0234 | 0.0000055 | 0.0061033 |
