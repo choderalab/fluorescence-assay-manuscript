@@ -10395,19 +10395,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6558892"
-     inkscape:cx="352.71402"
-     inkscape:cy="231.00685"
+     inkscape:zoom="0.96"
+     inkscape:cx="394.71872"
+     inkscape:cy="397.67352"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
      height="5.5in"
-     inkscape:window-width="1731"
-     inkscape:window-height="1309"
-     inkscape:window-x="1951"
-     inkscape:window-y="91"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1280"
+     inkscape:window-height="707"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -12703,7 +12703,7 @@
            x="390.19885"
            y="222.96329" /></flowRegion><flowPara
          id="flowPara8785" /></flowRoot>    <g
-       transform="matrix(0.60763889,0,0,-0.60763889,385.25786,874.37488)"
+       transform="matrix(0.60763889,0,0,-0.60763889,393.25786,874.37488)"
        inkscape:label="p38_binding_curve_Corning_3651"
        id="g8820-8">
       <path
@@ -16704,7 +16704,7 @@
            x="569.23077"
            y="204.26776" /></flowRegion><flowPara
          id="flowPara13363" /></flowRoot>    <g
-       transform="matrix(0.625,0,0,-0.625,376.76426,1034.2813)"
+       transform="matrix(0.625,0,0,-0.625,384.76426,1034.2813)"
        inkscape:label="p38_Kd_hist_Corning_3651"
        id="g7820">
       <path
@@ -19222,5 +19222,17 @@
         </text>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="388.89389"
+       y="701.29816"
+       id="text8754"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan8756"
+         x="388.89389"
+         y="701.29816"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'">C</tspan></text>
   </g>
 </svg>
