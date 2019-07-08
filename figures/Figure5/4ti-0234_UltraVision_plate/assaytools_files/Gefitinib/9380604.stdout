@@ -1,0 +1,98 @@
+Sender: LSF System <lsfadmin@lt02>
+Subject: Job 9380604: <gef_100k_dP> in cluster <lila> Done
+
+Job <gef_100k_dP> was submitted from host <lilac> by user <grundye> in cluster <lila> at Mon May 20 10:30:20 2019
+Job was executed on host(s) <lt02>, in queue <cpuqueue>, as user <grundye> in cluster <lila> at Mon May 20 10:30:20 2019
+</home/grundye> was used as the home directory.
+</home/grundye/EXPERIMENTS/kinase_inhibitors_and_assaytools/20190517_SMH_fig_3_corrected_L_stated_right_files/inputs/gef2> was used as the working directory.
+Started at Mon May 20 10:30:20 2019
+Terminated at Mon May 20 18:42:09 2019
+Results reported at Mon May 20 18:42:09 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J gef_100k_dP
+#BSUB -n 1
+#BSUB -R span[ptile=1]
+#BSUB -R rusage[mem=8]
+#BSUB -W 12:00
+#BSUB -o %J.stdout
+#BSUB -eo %J.stderr
+
+# make sure job’s submission CWD path can be accessed on the job’s execution host 
+cd $LS_SUBCWD
+
+# Activate the environment where Assaytools is installed
+source activate assaytools_af411f0
+
+# Export current conda environment requirements
+conda list --export > requirements.txt
+
+# Run my program
+echo “Started running Assaytools...”
+quickmodel --inputs inputs_spectra_gef --type spectra --nsamples 100000
+echo “Done.”
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   29493.67 sec.
+    Max Memory :                                 1 GB
+    Average Memory :                             0.62 GB
+    Total Requested Memory :                     8.00 GB
+    Delta Memory :                               7.00 GB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                141
+    Run time :                                   29510 sec.
+    Turnaround time :                            29509 sec.
+
+The output (if any) follows:
+
+“Started running Assaytools...”
+Skipping analysis of rows:  ['A', 'B', 'C', 'D', 'E', 'F']
+Skipping analysis of rows:  ['A', 'B', 'C', 'D', 'E', 'F']
+Skipping analysis of rows:  ['A', 'B', 'C', 'D', 'E', 'F']
+Src-Gefitinib-GH
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -11.9 [-12.9,-11.2] k_B T
+Delta G (mean and std after equil):
+   -11.9 +- 0.447 k_B T
+Kd (95% credibility interval after equilibration):
+   6.5 [2.6,13.7] uM
+Kd (mean and std after equil):
+   6.6 uM +- 3.0 uM
+p38-Gefitinib-GH
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -4.33 [-10.3,-0.212] k_B T
+Delta G (mean and std after equil):
+   -4.55 +- 2.93 k_B T
+Kd (95% credibility interval after equilibration):
+   13.2 [0.0,808.7] mM
+Kd (mean and std after equil):
+   10.6 mM +- 211.4 mM
+Abl-Gefitinib-GH
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -10.6 [-10.9,-10.4] k_B T
+Delta G (mean and std after equil):
+   -10.6 +- 0.142 k_B T
+Kd (95% credibility interval after equilibration):
+   25.2 [19.2,31.2] uM
+Kd (mean and std after equil):
+   25.0 uM +- 3.5 uM
+“Done.”
+
+
+PS:
+
+Read file <9380604.stderr> for stderr output of this job.
+
