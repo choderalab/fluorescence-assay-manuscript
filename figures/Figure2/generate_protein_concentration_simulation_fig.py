@@ -170,8 +170,8 @@ plt.setp(legend.get_title(),weight='bold')
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_P_1nM-update.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_P_1nM-update.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_P_1nM.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_P_1nM.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -201,8 +201,8 @@ plt.setp(legend.get_title(),weight='bold')
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_delG_result-update.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_delG_result-update.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_delG_result.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_delG_result.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -233,8 +233,8 @@ plt.setp(legend.get_title(),weight='bold')
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_Kd_result-update.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_Kd_result-update.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_Kd_result.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_Kd_result.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -274,8 +274,8 @@ plt.yticks(fontsize=16);
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_CV_bias-update.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_CV_bias-update.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_CV_bias.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_CV_bias.pdf', bbox_inches='tight')
 
 plt.close()
 
