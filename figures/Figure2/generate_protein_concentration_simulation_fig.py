@@ -76,7 +76,7 @@ pymc_model = pymcmodels.make_model(Ptot, dPstated, Ltot, dLstated,
     use_primary_inner_filter_correction=True,
     use_secondary_inner_filter_correction=True,
     assay_volume=assay_volume, DG_prior='uniform')
-mcmc = pymcmodels.run_mcmc(pymc_model)
+mcmc = pymcmodels.run_mcmc(pymc_model,db = 'pickle', dbname = '2nM_Kd_mcmc.pickle')
 
 #Let's define a list of Kd's, which will include our original Kd (2e-9 M):
 # Note here that our protein concentration is: Ptot = 1e-9 # M
@@ -118,7 +118,7 @@ for i,Kd in enumerate(Kd_list):
         use_secondary_inner_filter_correction=True,
         assay_volume=assay_volume, DG_prior='uniform')
     
-    mcmc_list.append(pymcmodels.run_mcmc(pymc_model))
+    mcmc_list.append(pymcmodels.run_mcmc(pymc_model,db = 'pickle', dbname = 'Kdlist_%s_mcmc.pickle'%i))
     
     F_PL_i_list.append(F_PL_i)
     F_L_i_list.append(F_L_i)
@@ -170,8 +170,8 @@ plt.setp(legend.get_title(),weight='bold')
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_P_1nM.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_P_1nM.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_P_1nM-update.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_P_1nM-update.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -201,8 +201,8 @@ plt.setp(legend.get_title(),weight='bold')
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_delG_result.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_delG_result.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_delG_result-update.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_delG_result-update.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -233,8 +233,8 @@ plt.setp(legend.get_title(),weight='bold')
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_Kd_result.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_Kd_result.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_Kd_result-update.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_Kd_result-update.pdf', bbox_inches='tight')
 
 plt.close()
 
@@ -274,8 +274,8 @@ plt.yticks(fontsize=16);
 
 plt.tight_layout()
 
-plt.savefig('simulated_fluorescence_CV_bias.png', dpi=500, bbox_inches='tight')
-plt.savefig('simulated_fluorescence_CV_bias.pdf', bbox_inches='tight')
+plt.savefig('simulated_fluorescence_CV_bias-update.png', dpi=500, bbox_inches='tight')
+plt.savefig('simulated_fluorescence_CV_bias-update.pdf', bbox_inches='tight')
 
 plt.close()
 
