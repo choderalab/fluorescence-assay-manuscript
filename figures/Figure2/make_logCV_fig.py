@@ -38,15 +38,17 @@ for i,trace in enumerate(trace_list):
 
 f, (ax1, ax2) = plt.subplots(2, sharex=True,figsize=(8,4.5))
 
+ax1.axhline(y=0,color='0.8',linestyle='--')
 for i,CV in enumerate(CV_list):
     ax1.semilogx(Kd_list[i], CV, dark_colors[i], marker = 'o', linestyle='None')
-
+    
 ax1.set_ylabel('%CV ($log_{10}(K_{d})$)',fontsize=14);
 #ax1.set_ylim((-15,0));
 
 ax1.spines['top'].set_visible(False)
 ax1.spines['right'].set_visible(False)
 
+ax2.axhline(y=0,color='0.8',linestyle='--')
 for i,bias in enumerate(bias_list):
     ax2.semilogx(Kd_list[i], bias*100, dark_colors[i], marker = 'o', linestyle='None')
 

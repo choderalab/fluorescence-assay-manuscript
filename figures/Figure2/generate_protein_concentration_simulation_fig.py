@@ -164,7 +164,7 @@ plt.xticks(fontsize=16)
 plt.xlim((2e-11,5e-5))
 plt.ylabel('Fluorescence',fontsize=20);
 
-legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5));
+legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5),frameon=False);
 plt.setp(legend.get_title(),fontsize='xx-large')
 plt.setp(legend.get_title(),weight='bold')
 
@@ -195,7 +195,7 @@ plt.xlim((-27,-9))
 plt.xlabel('$\Delta G$ ($k_B T$)',fontsize=16);
 plt.ylabel('$P(\Delta G)$',fontsize=20);
 
-legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5));
+legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5),frameon=False);
 plt.setp(legend.get_title(),fontsize='xx-large')
 plt.setp(legend.get_title(),weight='bold')
 
@@ -227,7 +227,7 @@ plt.xticks(fontsize=16)
 plt.xlabel('$K_{d}$ ($M$)',fontsize=16);
 plt.ylabel('$P(K_{d})$',fontsize=20);
 
-legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5));
+legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5), frameon=False);
 plt.setp(legend.get_title(),fontsize='xx-large')
 plt.setp(legend.get_title(),weight='bold')
 
