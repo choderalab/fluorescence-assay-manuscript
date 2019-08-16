@@ -100,11 +100,18 @@ Below is a description of each set of data.
       * protein: Abl kinase, note D382N mutant makes kinase catalytically inactive
       * ligands: Afatinib [AB], Neratinib [CD]
   * `AblT334I`
-    * *AblD382N-T334I_BosI_20151217_bw2020_gain120123031.xml*, *AblD382N-T334I_Bos_20151217_bw2020_gain120_120553.xml*, *AblD382N-T334I_Erl_20151217_bw2020_gain120_125515.xml*, and *AblD382N-T334I_Gef_20151217_bw2020_gain120_132641.xml*
-    * performed on December 17, 2015
-    * 96 well plate, assay volume 100 uL
-    * protein: AblT334I kinase with gatekeeper mutant
-    * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], and Gefitinib [GH]
+    * `2015-12-17` 
+      * *AblD382N-T334I_BosI_20151217_bw2020_gain120123031.xml*, *AblD382N-T334I_Bos_20151217_bw2020_gain120_120553.xml*, *AblD382N-T334I_Erl_20151217_bw2020_gain120_125515.xml*, and *AblD382N-T334I_Gef_20151217_bw2020_gain120_132641.xml*
+      * performed on December 17, 2015
+      * 96 well plate, assay volume 100 uL
+      * protein: AblT334I kinase with gatekeeper mutant
+      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], and Gefitinib [GH]
+    * `2019-07-16`
+      * *Abl_D382N_T334I_Bos_Iso_UV_20190716_143313.xml*, *Abl_D382N_T334I_Bos_UV_20190716_135721.xml*, *Abl_D382N_T334I_Erl_UV_20190716_151055*, and *Abl_D382N_T334I_Gef_UV_20190716_154656.xml*
+      * performed on July 16, 2019
+      * 96 well plate, assay volume 100 uL
+      * protein: AblT334I kinase with gatekeeper mutant
+      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], and Gefitinib [GH]
   * `CAII`
      * `2016-03-15`
        * *CAII_BosI_20160315_152656.xml*, *CAII_Bos_20160315_144336.xml*, *CAII_Erl_20160315_160342.xml*, and *CAII_Gef_20160315_164029.xml*
