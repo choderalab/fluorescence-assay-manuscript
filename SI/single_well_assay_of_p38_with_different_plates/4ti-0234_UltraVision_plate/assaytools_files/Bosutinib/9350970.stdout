@@ -1,0 +1,98 @@
+Sender: LSF System <lsfadmin@lt02>
+Subject: Job 9350970: <bos_100k_dP> in cluster <lila> Done
+
+Job <bos_100k_dP> was submitted from host <lilac> by user <grundye> in cluster <lila> at Fri May 17 13:44:16 2019
+Job was executed on host(s) <lt02>, in queue <cpuqueue>, as user <grundye> in cluster <lila> at Fri May 17 13:44:16 2019
+</home/grundye> was used as the home directory.
+</home/grundye/EXPERIMENTS/kinase_inhibitors_and_assaytools/20190517_SMH_fig_3_corrected_L_stated_right_files/inputs/bos> was used as the working directory.
+Started at Fri May 17 13:44:16 2019
+Terminated at Fri May 17 19:27:04 2019
+Results reported at Fri May 17 19:27:04 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J bos_100k_dP
+#BSUB -n 1
+#BSUB -R span[ptile=1]
+#BSUB -R rusage[mem=8]
+#BSUB -W 8:00
+#BSUB -o %J.stdout
+#BSUB -eo %J.stderr
+
+# make sure job’s submission CWD path can be accessed on the job’s execution host 
+cd $LS_SUBCWD
+
+# Activate the environment where Assaytools is installed
+source activate assaytools_af411f0
+
+# Export current conda environment requirements
+conda list --export > requirements.txt
+
+# Run my program
+echo “Started running Assaytools...”
+quickmodel --inputs inputs_spectra_bos --type spectra --nsamples 100000
+echo “Done.”
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   20556.13 sec.
+    Max Memory :                                 1 GB
+    Average Memory :                             0.68 GB
+    Total Requested Memory :                     8.00 GB
+    Delta Memory :                               7.00 GB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                141
+    Run time :                                   20568 sec.
+    Turnaround time :                            20568 sec.
+
+The output (if any) follows:
+
+“Started running Assaytools...”
+Skipping analysis of rows:  ['C', 'D', 'E', 'F', 'G', 'H']
+Skipping analysis of rows:  ['C', 'D', 'E', 'F', 'G', 'H']
+Skipping analysis of rows:  ['C', 'D', 'E', 'F', 'G', 'H']
+Src-Bosutinib-AB
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -25.2 [-34.1,-16.9] k_B T
+Delta G (mean and std after equil):
+   -25.3 +- 5.27 k_B T
+Kd (95% credibility interval after equilibration):
+   11.3 [0.0,46229.8] pM
+Kd (mean and std after equil):
+   10.5 pM +- 14960.6 pM
+p38-Bosutinib-AB
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -11.9 [-13.2,-10.6] k_B T
+Delta G (mean and std after equil):
+   -11.9 +- 0.656 k_B T
+Kd (95% credibility interval after equilibration):
+   6.5 [1.8,25.4] uM
+Kd (mean and std after equil):
+   6.5 uM +- 6.3 uM
+Abl-Bosutinib-AB
+MAP fitting cycle 5/5
+Delta G (95% credibility interval after equilibration):
+   -25.9 [-34.1,-17.8] k_B T
+Delta G (mean and std after equil):
+   -25.9 +- 4.94 k_B T
+Kd (95% credibility interval after equilibration):
+   5.7 [0.0,17786.7] pM
+Kd (mean and std after equil):
+   5.5 pM +- 6103.3 pM
+“Done.”
+
+
+PS:
+
+Read file <9350970.stderr> for stderr output of this job.
+
