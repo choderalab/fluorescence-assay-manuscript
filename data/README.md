@@ -5,10 +5,10 @@ Table summary of the results we have:
 
 | SINGLE WAVELENGTH  |  Src   | Abl   | Src GK  | Abl GK  | p38   | CA II  |
 |:--------:|:------:|:-----:|:-------:|:-------:|:-----:|------- |
-| Bos      | x      | x     | x       | x       | YES   |   x    |
-| Bsi      | x      | x     | x       | x       | YES   |   x    |
-| Erl      | x      | x     | x       | x       | YES   |   x    |
-| Gef      | x      | x     | x       | x       | YES   |   x    |
+| Bos      | YES    | YES   | YES     | YES     | YES   |   x  |
+| Bsi      | YES    | YES   | YES     | YES     | YES   |   x  |
+| Erl      | YES    | YES   | YES     | YES     | YES   |   x  |
+| Gef      | YES    | YES   | YES     | YES     | YES   |   x  |
 | Pon      | x      | x     | x       | x       | YES   |   x    |
 | Lap      | x      | x     | x       | x       | YES   |   x    |
 | Sar      | x      |    x |x  |     x |YES    |    x |
@@ -78,6 +78,34 @@ Below is a description of each set of data.
      * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib HCl [EF], Gefitinib [GH], Lapatinib [IJ], Ponatinib [KL], Vandetanib (new stock) [MN], and Vandetanib (old stock) [OP] 
      * Without DMSO backfill
      * Time points: 1, 2, 18 and 26 hours after standard plate preparation. 
+  * `p38_0.5uM` - *p38_Bos_NB_20190709_154049.xml*, *p38_Bos_Iso_NB_20190709_155414.xml*, *p38_Erl_NB_20190709_160747.xml*,  and *p38_Gef_NB_20190709_162114.xml*
+     * 4 LIGAND EXPERIMENT - at a standard 96-well plate (Corning 3651) fluorescent kinase inhibitor assay with 4 fluorescent ligands
+     * performed on July 9, 2019
+     * 96 well plate, assay volume 100 uL
+     * protein: p38 kinase at 0.5 uM
+     * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH]
+   * `Abl_D382N_0.5uM` - *Abl_Bos_NB_20190710_111828.xml*, *Abl_Bos_Iso_NB_20190710_113155.xml*, *Abl_Erl_NB_20190710_114526.xml*,  and *Abl_Gef_NB_20190710_115855.xml*
+     * 4 LIGAND EXPERIMENT - at a standard 96-well plate (Corning 3651) fluorescent kinase inhibitor assay with 4 fluorescent ligands
+     * performed on July 10, 2019
+     * 96 well plate, assay volume 100 uL
+     * protein: Abl D382N kinase at 0.5 uM
+     * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH]
+  * `Src_0.5uM` - *Src_Bos_NB_20190710_135049.xml*, *Src_Bos_Iso_NB_20190710_140416.xml*, *Src_Erl_NB_20190710_141748.xml*,  and *Src_Gef_NB_20190710_143120.xml*
+     * 4 LIGAND EXPERIMENT - at a standard 96-well plate (Corning 3651) fluorescent kinase inhibitor assay with 4 fluorescent ligands
+     * performed on July 10, 2019
+     * 96 well plate, assay volume 100 uL
+     * protein: Src kinase at 0.5 uM
+     * ligands: Bosutinib [AB], Bosutinib Isomer [CD], Erlotinib [EF], Gefitinib [GH]
+  * `Abl_D382N_T334I_0.5uM` - *Abl_D382N_T334I_Bos_NB_20190715_161412.xml*, *Abl_D382N_T334I_Bos_Iso_NB_20190715_162627.xml*, *Abl_D382N_T334I_Erl_NB_20190715_164047.xml*,  and *Abl_D382N_T334I_Gef_NB_20190715_165326.xml*
+     * 4 LIGAND EXPERIMENT - at a standard 96-well plate (Corning 3651) fluorescent kinase inhibitor assay with 4 fluorescent ligands
+     * performed on July 15, 2019
+     * 96 well plate, assay volume 100 uL
+     * protein: Abl D382N/T334I kinase at 0.5 uM
+  * `Src_T338I_0.5uM` - *Src_T338I_Bos_NB_20190715_125826.xml*, *Src_T338I_Bos_Iso_NB_20190715_131151.xml*, *Src_T338I_Erl_NB_20190715_132525.xml*,  and *Src_T338I_Gef_NB_20190715_133852.xml*
+     * 4 LIGAND EXPERIMENT - at a standard 96-well plate (Corning 3651) fluorescent kinase inhibitor assay with 4 fluorescent ligands
+     * performed on July 15, 2019
+     * 96 well plate, assay volume 100 uL
+     * protein: Src T338I kinase at 0.5 uM
 
 * `spectra` - data from spectra assays (excitation at a single wavelength, full emission spectra)
   * `Abl`
