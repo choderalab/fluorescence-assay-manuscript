@@ -76,7 +76,7 @@ pymc_model = pymcmodels.make_model(Ptot, dPstated, Ltot, dLstated,
     use_primary_inner_filter_correction=True,
     use_secondary_inner_filter_correction=True,
     assay_volume=assay_volume, DG_prior='uniform')
-mcmc = pymcmodels.run_mcmc(pymc_model)
+mcmc = pymcmodels.run_mcmc(pymc_model,db = 'pickle', dbname = '2nM_Kd_mcmc.pickle')
 
 #Let's define a list of Kd's, which will include our original Kd (2e-9 M):
 # Note here that our protein concentration is: Ptot = 1e-9 # M
@@ -118,7 +118,7 @@ for i,Kd in enumerate(Kd_list):
         use_secondary_inner_filter_correction=True,
         assay_volume=assay_volume, DG_prior='uniform')
     
-    mcmc_list.append(pymcmodels.run_mcmc(pymc_model))
+    mcmc_list.append(pymcmodels.run_mcmc(pymc_model,db = 'pickle', dbname = 'Kdlist_%s_mcmc.pickle'%i))
     
     F_PL_i_list.append(F_PL_i)
     F_L_i_list.append(F_L_i)
@@ -164,7 +164,7 @@ plt.xticks(fontsize=16)
 plt.xlim((2e-11,5e-5))
 plt.ylabel('Fluorescence',fontsize=20);
 
-legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5));
+legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5),frameon=False);
 plt.setp(legend.get_title(),fontsize='xx-large')
 plt.setp(legend.get_title(),weight='bold')
 
@@ -195,7 +195,7 @@ plt.xlim((-27,-9))
 plt.xlabel('$\Delta G$ ($k_B T$)',fontsize=16);
 plt.ylabel('$P(\Delta G)$',fontsize=20);
 
-legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5));
+legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5),frameon=False);
 plt.setp(legend.get_title(),fontsize='xx-large')
 plt.setp(legend.get_title(),weight='bold')
 
@@ -227,7 +227,7 @@ plt.xticks(fontsize=16)
 plt.xlabel('$K_{d}$ ($M$)',fontsize=16);
 plt.ylabel('$P(K_{d})$',fontsize=20);
 
-legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5));
+legend=plt.legend(fontsize=16,title=r'Kd',loc='center left', bbox_to_anchor=(1, 0.5), frameon=False);
 plt.setp(legend.get_title(),fontsize='xx-large')
 plt.setp(legend.get_title(),weight='bold')
 
