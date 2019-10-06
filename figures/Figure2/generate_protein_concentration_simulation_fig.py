@@ -45,20 +45,27 @@ def two_component_binding(Kd, Ptot, Ltot):
 
 [L, P, PL] = two_component_binding(Kd, Ptot, Ltot)
 
-# Making max 1400 relative fluorescence units, and scaling all of PL (complex concentration) 
-# to that, adding some random noise
-npoints = len(Ltot)
-sigma = 10.0 # size of noise
-F_PL_i = (1400/1e-9)*PL + sigma * np.random.randn(npoints)
+# Define F_PL, F_L, sigma and F_buffer from mean of values from Src-Bosutinib Isomer spectra experiments
+# F_PL = 1400/1e-9 old param - manually selected
+F_PL = 14e11
+#F_PL = 11.4e10 # actual param from  Src-Bosutinib Isomer 
 
-#Let's add an F_background just so we don't ever go below zero
-F_background = 40
+# F_L = .4/1e-8 old param - manually selected
+F_L = 4e7 # reformatted old param
+#F_L = 1.8e9 # actual param from  Src-Bosutinib Isomer 
+
+sigma = 10.0 # size of noise old param - manually selected
+#sigma = 600 # actual param from  Src-Bosutinib Isomer 
+
+F_background = 40 #old param - manually selected
+# F_background = 1000 # actual param from  Src-Bosutinib Isomer 
+
+npoints = len(Ltot)
 #We also need to model fluorescence for our ligand
-F_L_i = F_background + (.4/1e-8)*Ltot + sigma * np.random.randn(npoints)
+F_L_i = F_background + F_L*Ltot + sigma * np.random.randn(npoints)
 
 #Let's also add these to our complex fluorescence readout
-F_PL_i = F_background + ((1400/1e-9)*PL + sigma * np.random.randn(npoints)) + ((.4/1e-8)*L + sigma * np.random.randn(npoints))
-
+F_PL_i = F_background + F_PL*PL + F_L*L + sigma * np.random.randn(npoints)
 
 # We know errors from our pipetting instruments.
 P_error = 0.15
