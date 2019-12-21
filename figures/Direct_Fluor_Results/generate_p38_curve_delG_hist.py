@@ -64,10 +64,10 @@ plt.savefig('p38_binding_curve.pdf')
 
 import pickle
 
-p38_Bos_file = '../../analysis/bayes/corrected-concentrations/bos/p38-Bosutinib-AB_mcmc-2019-05-17 15:34.pickle'
-p38_Bsi_file = '../../analysis/bayes/corrected-concentrations/bos_iso/p38-Bosutinib Isomer-CD_mcmc-2019-05-17 15:50.pickle'
-p38_Erl_file = '../../analysis/bayes/corrected-concentrations/erl/p38-Erlotinib-EF_mcmc-2019-05-17 16:01.pickle'
-p38_Gef_file = '../../analysis/bayes/corrected-concentrations/gef/p38-Gefitinib-GH_mcmc-2019-05-20 13:38.pickle'
+p38_Bos_file = '../../analysis/bayes/corrected-concentrations-Perror15/Bos/p38-Bosutinib-AB_mcmc-2019-10-07 14:52.pickle'
+p38_Bsi_file = '../../analysis/bayes/corrected-concentrations-Perror15/Bsi/p38-Bosutinib Isomer-CD_mcmc-2019-10-07 16:50.pickle'
+p38_Erl_file = '../../analysis/bayes/corrected-concentrations-Perror15/Erl/p38-Erlotinib-EF_mcmc-2019-10-07 15:50.pickle'
+p38_Gef_file = '../../analysis/bayes/corrected-concentrations-Perror15/Gef/p38-Gefitinib-GH_mcmc-2019-10-07 16:01.pickle'
 
 with open(r'%s'%p38_Bos_file,'rb') as my_file:
     p38_Bos_data = pickle.load(my_file)
